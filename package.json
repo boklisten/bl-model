@@ -1,0 +1,6 @@
+{
+  "name": "bl-model",
+  "version": "1.0.1",
+  "description": "generic classes for use in all boklisten apps",
+  "license": "MIT"
+}
