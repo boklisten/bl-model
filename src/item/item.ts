@@ -1,7 +1,6 @@
 
-
-export type Item = {
-	id: string,
+export class Item {
+	id: string;
 	title: string;
 	type: string;
 	info: any;
