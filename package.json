@@ -1,12 +1,19 @@
 {
   "name": "bl-model",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "generic classes for use in all boklisten apps",
   "license": "MIT",
-  "main": "out/index.js",
-  "typings": "out/index.d.ts",
+  "main": "dist/bundles/bl-model.umd.js",
+  "module": "dist/bl-model.umd.js",
+  "es2015": "dist/bl-model.js",
+  "typings": "dist/bl-model.d.ts",
   "scripts": {
-    "compile": "rimraf out && tsc",
-    "preinstall": "npm run compile"
+    "build": "tsb -p tsconfig.build.json"
+  },
+  "devDependencies": {
+    "typescript-library-bundler": "^0.1.6"
+  },
+  "dependencies": {
+    "typescript": "^2.6.1"
   }
 }
