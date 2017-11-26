@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "description": "generic classes for use in all boklisten apps",
   "license": "MIT",
-  "main": "dist/bundles/bl-model.umd.js",
-  "module": "dist/bl-model.umd.js",
-  "es2015": "dist/bl-model.js",
-  "typings": "dist/bl-model.d.ts",
+  "main": "./bundles/bl-model.umd.js",
+  "module": "./bl-model.es5.js",
+  "es2015": "./bl-model.js",
+  "typings": "./dist/bl-model.d.ts",
   "scripts": {
-    "build": "tsb -p tsconfig.build.json"
+    "pkg": "tsb -p tsconfig.build.json && cp ./package.json ./dist/package.json && cp ./README.md ./dist/README.md"
   },
   "devDependencies": {
     "typescript-library-bundler": "^0.1.6"
