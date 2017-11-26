@@ -1,2 +1,5 @@
 
 .idea
+/dist
+.compile
+/node_modules

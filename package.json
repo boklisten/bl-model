@@ -6,7 +6,7 @@
   "main": "./bundles/bl-model.umd.js",
   "module": "./bl-model.es5.js",
   "es2015": "./bl-model.js",
-  "typings": "./dist/bl-model.d.ts",
+  "typings": "./bl-model.d.ts",
   "scripts": {
     "pkg": "tsb -p tsconfig.build.json && cp ./package.json ./dist/package.json && cp ./README.md ./dist/README.md"
   },
