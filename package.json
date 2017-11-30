@@ -7,7 +7,7 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "prepublish": "npm run build",
-    "build": "tsc",
+    "build": "tsc"
   },
   "dependencies": {
     "typescript": "^2.6.1"
