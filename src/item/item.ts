@@ -1,6 +1,7 @@
 
-export class Item {
-	id: string;
+import {BlDocument} from "../bl-document/bl-document";
+
+export class Item extends BlDocument {
 	title: string;
 	type: string;
 	info: any;
@@ -10,6 +11,4 @@ export class Item {
 	sellPrice: number;
 	rent: boolean;
 	buy: boolean;
-	active: boolean;
-	creationTime: Date;
 }

@@ -1,6 +1,7 @@
 
-export class Branch {
-	id: string;
+import {BlDocument} from "../bl-document/bl-document";
+
+export class Branch extends BlDocument {
 	name: string;
 	type: string;
 	desc: string;
@@ -27,6 +28,4 @@ export class Branch {
 		postCity: string,
 		country: string
 	};
-	lastUpdated: Date;
-	creationTime: Date;
 }

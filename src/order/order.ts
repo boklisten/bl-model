@@ -1,12 +1,13 @@
-export class Order {
-	id: string;
+import {BlDocument} from "../bl-document/bl-document";
+
+export class Order extends BlDocument {
 	employee?: string;
 	customer?: string;
 	amount: number;
 	application?: string;
 	byCustomer: boolean;
 	branch: string;
-	orderItems: any[];
+	orderItems: string[];
 	payments: {
 		method: string,
 		amount: number,
@@ -15,7 +16,4 @@ export class Order {
 		branch?: string,
 		time: Date;
 	}[];
-	user: {
-		blid: string;
-	}
 }
