@@ -1,8 +1,11 @@
 
-export {Item} from './item/item';
-export {Branch} from './branch/branch';
-export {BlapiResponse} from './blapi-response/blapi-response';
+export {BlError} from './bl-error/bl-error';
 export {BlapiErrorResponse} from './blapi-response/blapi-error-response';
+export {BlapiResponse} from './blapi-response/blapi-response';
+export {Branch} from './branch/branch';
+export {Comment} from './comment/comment';
+export {CustomerItem} from './customer-item/customer-item';
+export {Item} from './item/item';
 export {OpeningHour} from './opening-hour/opening-hour';
 export {Order} from './order/order';
-export {Comment} from './comment/comment';
+export {OrderItem} from './order-item/order-item';
