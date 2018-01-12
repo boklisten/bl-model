@@ -1,4 +1,5 @@
 
+export {BlDocument} from './bl-document/bl-document';
 export {BlError} from './bl-error/bl-error';
 export {BlapiErrorResponse} from './blapi-response/blapi-error-response';
 export {BlapiResponse} from './blapi-response/blapi-response';
