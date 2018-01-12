@@ -11,8 +11,7 @@ export class BlError extends Error {
 		super(msg);
 		this._errorStack = [];
 		this._store = [];
-		this.code(0);
-		
+		this._code = 0;
 	}
 	
 	add(blError: BlError): BlError {
