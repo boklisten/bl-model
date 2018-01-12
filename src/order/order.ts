@@ -7,7 +7,10 @@ export class Order extends BlDocument {
 	application?: string;
 	byCustomer: boolean;
 	branch: string;
-	orderItems: string[];
+	orderItems: {
+		item: string,
+		amount: number
+	}[];
 	payments: {
 		method: string,
 		amount: number,

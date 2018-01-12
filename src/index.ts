@@ -9,4 +9,3 @@ export {CustomerItem} from './customer-item/customer-item';
 export {Item} from './item/item';
 export {OpeningHour} from './opening-hour/opening-hour';
 export {Order} from './order/order';
-export {OrderItem} from './order-item/order-item';
