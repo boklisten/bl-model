@@ -9,7 +9,9 @@ export class Order extends BlDocument {
 	branch: string;
 	orderItems: {
 		item: string,
-		amount: number
+		amount: number,
+		type: "rent" | "buy" | "cancel" | "extend",
+		customerItem?: string
 	}[];
 	payments: {
 		method: string,
