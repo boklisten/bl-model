@@ -12,7 +12,7 @@ export class Order extends BlDocument {
 	payments: {
 		method: string,
 		amount: number,
-		confirmed: string,
+		confirmed: boolean,
 		byBranch: boolean,
 		branch?: string,
 		time: Date;
