@@ -1,4 +1,5 @@
 import {BlDocument} from "../bl-document/bl-document";
+import {OrderItem} from "../order-item/order-item";
 
 export class Order extends BlDocument {
 	employee?: string;
@@ -7,12 +8,7 @@ export class Order extends BlDocument {
 	application?: string;
 	byCustomer: boolean;
 	branch: string;
-	orderItems: {
-		item: string,
-		amount: number,
-		type: "rent" | "buy" | "cancel" | "extend",
-		customerItem?: string
-	}[];
+	orderItems: OrderItem[];
 	payments: {
 		method: string,
 		amount: number,
