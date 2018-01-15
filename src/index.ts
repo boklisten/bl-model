@@ -10,3 +10,5 @@ export {Item} from './item/item';
 export {OpeningHour} from './opening-hour/opening-hour';
 export {Order} from './order/order';
 export {OrderItem} from './order-item/order-item';
+export {OrderPayment} from './order-payment/order-payment';
+
