@@ -5,16 +5,16 @@ export class CustomerItem extends BlDocument {
 	deadline: Date;
 	status: string;
 	handout: boolean;
-	handoutTime: boolean;
-	handoutBranch: string;
-	handoutEmployee: string;
+	handoutTime?: Date;
+	handoutBranch?: string;
+	handoutEmployee?: string;
 	returned: boolean;
-	returnTime: Date;
-	returnBranch: string;
-	returnEmployee: string;
+	returnTime?: Date;
+	returnBranch?: string;
+	returnEmployee?: string;
 	totalAmount: number;
 	orderItems: string[];
-	deadlineExtends: {
+	deadlineExtends?: {
 		oldDeadline: Date,
 		newDeadline: Date,
 		orderItem: string,
