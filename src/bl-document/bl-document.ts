@@ -7,7 +7,7 @@ export class BlDocument {
 	creationTime: Date;
 	comments: Comment[];
 	active: boolean;
-	user: {
+	user?: {
 		id: string;
 	}
 }
