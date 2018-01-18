@@ -5,4 +5,8 @@ export class OrderItem {
 	type: "rent" | "buy" | "extend" | "sell" | "buyout" | "cancel" | "cancel-buy" | "cancel-extend" | "cancel-sell" | "cancel-buyout";
 	customerItem?: string;
 	discount?: number;
+	rentInfo?: {
+		oneSemester: boolean,
+		twoSemesters: boolean
+	}
 }
