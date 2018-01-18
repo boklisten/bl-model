@@ -20,7 +20,7 @@ export class Branch extends BlDocument {
 		extendPrice: number,
 		acceptedMethods: string[]
 	};
-	contactInfo: {
+	contactInfo?: {
 		phone: number,
 		email: string,
 		address: string,
