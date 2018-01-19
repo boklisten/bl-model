@@ -8,5 +8,6 @@ export class OrderItem {
 	rentInfo?: {
 		oneSemester: boolean,
 		twoSemesters: boolean
-	}
+	};
+	lastOrderItem?: OrderItem;
 }
