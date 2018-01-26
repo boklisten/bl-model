@@ -7,6 +7,7 @@ export class Item extends BlDocument {
 	info: any;
 	desc: string;
 	price: number;
+	taxRate: number;
 	sell: boolean;
 	sellPrice: number;
 	rent: boolean;
