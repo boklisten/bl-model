@@ -11,4 +11,6 @@ export {OpeningHour} from './opening-hour/opening-hour';
 export {Order} from './order/order';
 export {OrderItem} from './order-item/order-item';
 export {OrderPayment} from './order-payment/order-payment';
+export {UserPermission} from './permission/user-permission';
+export {AccessToken} from './token/access-token';
 
