@@ -1,6 +1,6 @@
 
 
-class UserDetail {
+export class UserDetail {
 	name: string;
 	email: string;
 	phone: string;
