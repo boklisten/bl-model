@@ -13,4 +13,5 @@ export {OrderItem} from './order-item/order-item';
 export {OrderPayment} from './order-payment/order-payment';
 export {UserPermission} from './permission/user-permission';
 export {AccessToken} from './token/access-token';
+export {RefreshToken} from './token/refresh-token';
 export {UserDetail} from './user/user-detail/user-detail';
