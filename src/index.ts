@@ -15,3 +15,8 @@ export {UserPermission} from './permission/user-permission';
 export {AccessToken} from './token/access-token';
 export {RefreshToken} from './token/refresh-token';
 export {UserDetail} from './user/user-detail/user-detail';
+
+
+export {BlApiError} from './bl-api-error/bl-api-error';
+export {BlApiLoginRequiredError} from './bl-api-error/bl-api-login-required-error';
+export {BlApiPermissionDeniedError} from './bl-api-error/bl-api-permission-denied-error';
