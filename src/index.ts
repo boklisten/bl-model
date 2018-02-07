@@ -20,3 +20,4 @@ export {UserDetail} from './user/user-detail/user-detail';
 export {BlApiError} from './bl-api-error/bl-api-error';
 export {BlApiLoginRequiredError} from './bl-api-error/bl-api-login-required-error';
 export {BlApiPermissionDeniedError} from './bl-api-error/bl-api-permission-denied-error';
+export {BlApiNotFoundError} from './bl-api-error/bl-api-not-found-error';
