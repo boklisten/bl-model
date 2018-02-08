@@ -1,6 +1,8 @@
 
 
-export class UserDetail {
+import {BlDocument} from "../../bl-document/bl-document";
+
+export class UserDetail extends BlDocument {
 	name: string;
 	email: string;
 	phone: string;
