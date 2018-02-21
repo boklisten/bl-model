@@ -20,5 +20,6 @@ export class UserDetail extends BlDocument {
 		phone: string;
 		confirmed?: boolean;
 	};
-	customerItems?: string[]
+	orders?: string[];
+	customerItems?: string[];
 }
