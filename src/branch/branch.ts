@@ -8,6 +8,10 @@ export class Branch extends BlDocument {
 	root: boolean;
 	childBranches: string[];
 	items: string[];
+	itemCategories: {
+		name: string,
+		items: string[]
+	};
 	openingHours: string[];
 	payment: {
 		branchResponsible: boolean,
