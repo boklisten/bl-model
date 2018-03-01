@@ -11,7 +11,7 @@ export class Branch extends BlDocument {
 	itemCategories: {
 		name: string,
 		items: string[]
-	};
+	}[];
 	openingHours: string[];
 	payment: {
 		branchResponsible: boolean,
