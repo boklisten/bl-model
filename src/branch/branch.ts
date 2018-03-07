@@ -1,5 +1,6 @@
 
 import {BlDocument} from "../bl-document/bl-document";
+import {PaymentMethod} from "../payment/payment-method";
 
 export class Branch extends BlDocument {
 	name: string;
@@ -22,7 +23,7 @@ export class Branch extends BlDocument {
 			buyout: number
 		},
 		extendPrice: number,
-		acceptedMethods: string[]
+		acceptedMethods: PaymentMethod[]
 	};
 	contactInfo?: {
 		phone: number,

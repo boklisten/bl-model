@@ -1,6 +1,8 @@
 
+import {PaymentMethod} from "../payment/payment-method";
+
 export class OrderPayment {
-	method: "card" | "vipps" | "cash";
+	method: PaymentMethod;
 	amount: number;
 	confirmed: boolean;
 	time: Date;
