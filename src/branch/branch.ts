@@ -9,10 +9,6 @@ export class Branch extends BlDocument {
 	root: boolean;
 	childBranches: string[];
 	items: string[];
-	itemCategories: {
-		name: string,
-		items: string[]
-	}[];
 	openingHours: string[];
 	payment: {
 		branchResponsible: boolean,
@@ -25,6 +21,10 @@ export class Branch extends BlDocument {
 		extendPrice: number,
 		acceptedMethods: PaymentMethod[]
 	};
+	itemCategories?: {
+		name: string,
+		items: string[]
+	}[];
 	contactInfo?: {
 		phone: number,
 		email: string,

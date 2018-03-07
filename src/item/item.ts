@@ -11,6 +11,6 @@ export class Item extends BlDocument {
 	sell: boolean;
 	sellPrice: number;
 	rent: boolean;
-	categories: string[];
 	buy: boolean;
+	categories?: string[];
 }
