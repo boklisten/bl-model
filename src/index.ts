@@ -9,14 +9,16 @@ export {CustomerItem} from './customer-item/customer-item';
 export {Item} from './item/item';
 export {OpeningHour} from './opening-hour/opening-hour';
 export {Order} from './order/order';
-export {OrderItem} from './order-item/order-item';
+export {OrderItem} from './order/order-item/order-item';
 export {OrderPayment} from './order-payment/order-payment';
 export {UserPermission} from './permission/user-permission';
 export {AccessToken} from './token/access-token';
 export {RefreshToken} from './token/refresh-token';
 export {UserDetail} from './user/user-detail/user-detail';
-export {PaymentMethod} from './payment/payment-method';
 
+
+export {Payment} from './payment/payment';
+export {PaymentMethod} from './payment/payment-method/payment-method';
 
 export {BlApiError} from './bl-api-error/bl-api-error';
 export {BlApiLoginRequiredError} from './bl-api-error/bl-api-login-required-error';

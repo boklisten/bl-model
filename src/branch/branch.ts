@@ -1,6 +1,6 @@
 
 import {BlDocument} from "../bl-document/bl-document";
-import {PaymentMethod} from "../payment/payment-method";
+import {PaymentMethod} from "../payment/payment-method/payment-method";
 
 export class Branch extends BlDocument {
 	name: string;
