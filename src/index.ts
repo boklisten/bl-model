@@ -18,6 +18,9 @@ export {UserDetail} from './user/user-detail/user-detail';
 
 export {Payment} from './payment/payment';
 export {Delivery} from './delivery/delivery';
+export {DeliveryMethod} from './delivery/delivery-method/delivery-method';
+export {DeliveryInfoBring} from './delivery/delivery-info/delivery-info-bring';
+export {DeliveryInfoBranch} from './delivery/delivery-info/delivery-info-branch';
 
 export {BlApiError} from './bl-api-error/bl-api-error';
 export {BlApiLoginRequiredError} from './bl-api-error/bl-api-login-required-error';
