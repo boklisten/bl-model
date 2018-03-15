@@ -9,7 +9,7 @@
     "removeComments": true,                /* Do not emit comments to output. */
     "moduleResolution": "node",
     //"noEmit": true,                        /* Do not emit outputs. */
-    "strict": true                            /* Enable all strict type-checking options. */
+    "strict": false /* Enable all strict type-checking options. */
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]

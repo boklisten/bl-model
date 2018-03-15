@@ -7,7 +7,8 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "tsc"
+    "build": "tsc",
+    "blink": "npm run build && cp ./package.json ./dist/ && npm link ./dist"
   },
   "dependencies": {
     "typescript": "^2.6.1"

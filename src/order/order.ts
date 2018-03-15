@@ -4,6 +4,7 @@ import {OrderItem} from "./order-item/order-item";
 export class Order extends BlDocument {
 	employee?: string;
 	customer?: string;
+	placed?: boolean;
 	amount: number;
 	application?: string;
 	byCustomer: boolean;
