@@ -3,12 +3,12 @@ import {BlDocument} from "../bl-document/bl-document";
 export class CustomerItem extends BlDocument {
 	item: string;
 	deadline: Date;
-	status: string;
 	handout: boolean;
 	handoutTime?: Date;
 	handoutBranch?: string;
 	handoutEmployee?: string;
-	returned: boolean;
+	status?: "rent" | "cancel" | "buy";
+	returned?: boolean;
 	returnTime?: Date;
 	returnBranch?: string;
 	returnEmployee?: string;
@@ -17,7 +17,6 @@ export class CustomerItem extends BlDocument {
 	deadlineExtends?: {
 		oldDeadline: Date,
 		newDeadline: Date,
-		orderItem: string,
 		time: Date
 	}[];
 }
