@@ -27,10 +27,10 @@ export class CustomerItem extends BlDocument {
 		time: Date //the time of return
 	};
 	orders?: string[]; // what orders are this customerItem a part of, must be at least one, the order placement
-	periodExtends?: [{
+	periodExtends?: {
 		from: Date, // the old deadline
 		to: Date, // the new deadline
 		periodType: Period, //what type of period this extend is
 		time: Date // time this extend was made
-	}];
+	}[];
 }
