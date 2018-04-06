@@ -10,6 +10,7 @@ export class BranchPaymentInfo {
 	}];
 	extendPeriods: [{
 		type: Period, //the possible extend period type
+		maxNumberOfPeriods: number, // the max number of periods this item can be extended
 		price: number, // the price of the extend period
 		percentage?: number //if set then use percentage of item
 	}];

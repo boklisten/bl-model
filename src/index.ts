@@ -17,6 +17,9 @@ export {UserDetail} from './user/user-detail/user-detail';
 
 
 export {Payment} from './payment/payment';
+export {PaymentMethod} from './payment/payment-method/payment-method';
+export {PaymentInfo} from './payment/payment-info/payment-info';
+
 export {Delivery} from './delivery/delivery';
 export {DeliveryMethod} from './delivery/delivery-method/delivery-method';
 export {DeliveryInfoBring} from './delivery/delivery-info/delivery-info-bring';

@@ -1,7 +1,7 @@
 
 import {BlDocument} from "../bl-document/bl-document";
-import {PaymentMethod} from "../payment/payment-method/payment-method";
 import {BranchPaymentInfo} from "./branch-payment-info";
+import {UserPermission} from "../permission/user-permission";
 
 export class Branch extends BlDocument {
 	name: string; // the name of the branch
@@ -11,6 +11,7 @@ export class Branch extends BlDocument {
 	childBranches?: string[]; // does this branch have child branches
 	openingHours?: string[]; // id of all the opening hours this branch has
 	paymentInfo?: BranchPaymentInfo; // payment information for this branch
+	viewableFor?: [UserPermission]
 	contactInfo?: { // the contact info for the branch
 		phone: number,
 		email: string,
