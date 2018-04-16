@@ -9,4 +9,5 @@ export class Delivery extends BlDocument {
 	info: DeliveryInfoBring | DeliveryInfoBranch; //specific info for the delivery type
 	order: string; //id of the order
 	amount: number; //total amount for this delivery
+	taxAmount?: number;
 }
