@@ -9,6 +9,7 @@ import {Period} from "../period/period";
  */
 export class CustomerItem extends BlDocument {
 	item: string; // what item is this customerItem for
+	customer: string; // the id of the customer
 	sharedItem?: string; // can point to a shared item, if so the item has a unique id and can be traced
 	deadline: Date; //the deadline to return this item
 	status?: "rent" | "cancel" | "buy"; // status of the customerItem

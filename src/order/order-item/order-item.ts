@@ -13,5 +13,7 @@ export class OrderItem {
 	taxAmount: number; //amount * taxRate
 	info?: OrderItemInfo; //if the type is rent or extend, this object contains info about the rental period
 	discount?: PaymentDiscount; //can also have a discount on each item
-	delivered?: boolean // if the orderItem is delivered out or not
+	delivered?: boolean; // if the orderItem is delivered out or not
+	movedToOrder?: string; // if the orderItem is added again in a new order, this points to it
+	movedFromOrder?: string; //if the orderItem is from another order, this points to it
 }
