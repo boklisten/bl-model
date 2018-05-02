@@ -1,2 +1,2 @@
 
-export type OrderItemType =  "rent" | "buy" | "extend" | "sell" | "buyout" | "cancel";
+export type OrderItemType =  "rent" | "buy" | "extend" | "sell" | "buyout" | "return" | "cancel";
