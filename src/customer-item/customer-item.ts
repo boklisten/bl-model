@@ -27,6 +27,10 @@ export class CustomerItem extends BlDocument {
 		returnEmployee?: string, // if it was returned to a branch, this is the id of the employee
 		time: Date //the time of return
 	};
+	buyout?: boolean;
+	buyoutInfo?: {
+		order: string
+	};
 	orders?: string[]; // what orders are this customerItem a part of, must be at least one, the order placement
 	totalAmount?: number;
 	periodExtends?: {
