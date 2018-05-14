@@ -8,8 +8,9 @@ export class BlDocument {
 	creationTime?: Date;
 	comments?: Comment[];
 	active?: boolean;
-	user?: {
-		id: string;
-		permission?: UserPermission;
-	}
+	user?: { // the user that created the document
+		id: string; // the id of the user
+		permission?: UserPermission; // the permission of the user
+	};
+	viewableFor?: string[] // ids of other user that can access this document if it is restricted
 }
