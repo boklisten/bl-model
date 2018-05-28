@@ -26,7 +26,7 @@ export class Branch extends BlDocument {
 			longitude: string
 		}
 	};
-	branchItems: BranchItem[];
+	branchItems?: BranchItem[];
 	items?: string[]; // all the items this branch has
 	inventory?: [{ // the inventory of this branch, holds info about how many of each item it has
 		item: string, // the item
