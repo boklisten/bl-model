@@ -2,6 +2,7 @@
 import {BlDocument} from "../bl-document/bl-document";
 import {BranchPaymentInfo} from "./branch-payment-info";
 import {UserPermission} from "../permission/user-permission";
+import {BranchItem} from "./branch-item";
 
 export class Branch extends BlDocument {
 	name: string; // the name of the branch
@@ -11,7 +12,7 @@ export class Branch extends BlDocument {
 	childBranches?: string[]; // does this branch have child branches
 	openingHours?: string[]; // id of all the opening hours this branch has
 	paymentInfo?: BranchPaymentInfo; // payment information for this branch
-	viewableFor?: [UserPermission]
+	viewableFor?: [UserPermission];
 	contactInfo?: { // the contact info for the branch
 		phone: number,
 		email: string,
@@ -25,6 +26,7 @@ export class Branch extends BlDocument {
 			longitude: string
 		}
 	};
+	branchItems: BranchItem[];
 	items?: string[]; // all the items this branch has
 	inventory?: [{ // the inventory of this branch, holds info about how many of each item it has
 		item: string, // the item

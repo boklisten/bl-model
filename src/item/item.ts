@@ -1,16 +1,13 @@
 
 import {BlDocument} from "../bl-document/bl-document";
+import {ItemType} from "./item-type";
 
 export class Item extends BlDocument {
 	title: string;
-	type: string;
-	info: any;
-	desc: string;
+	type: ItemType;
 	price: number;
 	taxRate: number;
-	sell: boolean;
-	sellPrice: number;
-	rent: boolean;
-	buy: boolean;
+	info?: any;
+	desc?: string;
 	categories?: string[];
 }
