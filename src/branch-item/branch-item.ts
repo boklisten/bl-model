@@ -1,5 +1,6 @@
+import {BlDocument} from "..";
 
-export class BranchItem {
+export class BranchItem extends BlDocument {
 	branch: string;
 	item: string;
 	rent?: boolean;

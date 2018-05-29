@@ -4,6 +4,7 @@ export {BlError} from './bl-error/bl-error';
 export {BlapiErrorResponse} from './blapi-response/blapi-error-response';
 export {BlapiResponse} from './blapi-response/blapi-response';
 export {Branch} from './branch/branch';
+export {BranchItem} from './branch-item/branch-item';
 export {Comment} from './comment/comment';
 export {CustomerItem} from './customer-item/customer-item';
 export {Item} from './item/item';
