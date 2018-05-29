@@ -2,7 +2,7 @@
 import {BlDocument} from "../bl-document/bl-document";
 import {BranchPaymentInfo} from "./branch-payment-info";
 import {UserPermission} from "../permission/user-permission";
-import {BranchItem} from "./branch-item";
+import {BranchItem} from "../branch-item/branch-item";
 
 export class Branch extends BlDocument {
 	name: string; // the name of the branch
@@ -26,12 +26,7 @@ export class Branch extends BlDocument {
 			longitude: string
 		}
 	};
-	branchItems?: BranchItem[];
-	items?: string[]; // all the items this branch has
-	inventory?: [{ // the inventory of this branch, holds info about how many of each item it has
-		item: string, // the item
-		sharedItems: [string] // a list of ids to sharedItems of type item aka, how many of each
-	}];
+	branchItems: string[]; // ids of the branchItems for this branch
 	itemCategories?: [{ // the item categories
 		name: string, // the name of the category
 		items: string[] // the items this category have
