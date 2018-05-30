@@ -8,4 +8,5 @@ export class BranchItem extends BlDocument {
 	buy?: boolean;
 	active?: boolean;
 	sharedItems?: string[];
+	categories?: string[];
 }
