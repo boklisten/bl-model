@@ -4,6 +4,7 @@ import {UserPermission} from "../permission/user-permission";
 
 export class BlDocument {
 	id: string;
+	blid?: string;
 	lastUpdated?: Date;
 	creationTime?: Date;
 	comments?: Comment[];
