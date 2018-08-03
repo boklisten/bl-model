@@ -3,6 +3,7 @@ import {Period} from "../period/period";
 
 export class BranchPaymentInfo {
 	responsible: boolean; // if set the branch is responsible for payment, not the customer
+	responsibleForDelivery?: boolean; // if set the customer does not need to pay for the delivery
 	rentPeriods: [{
 		type: Period, // the allowed period
 		date: Date,
