@@ -26,6 +26,10 @@ export class Branch extends BlDocument {
 			longitude: string
 		}
 	};
+	deliveryMethods?: {
+		branch?: boolean,
+		byMail?: boolean
+	};
 	branchItems: string[]; // ids of the branchItems for this branch
 	itemCategories?: [{ // the item categories
 		name: string, // the name of the category
