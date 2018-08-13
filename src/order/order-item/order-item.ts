@@ -11,6 +11,7 @@ export class OrderItem {
 	unitPrice: number; //item.price * rentRate
 	taxRate: number; //item.taxRate
 	taxAmount: number; //amount * taxRate
+	handout?: boolean; // if set, this orderItem is the "handout" of this item
 	info?: OrderItemInfo; //if the type is rent or extend, this object contains info about the rental period
 	discount?: PaymentDiscount; //can also have a discount on each item
 	delivered?: boolean; // if the orderItem is delivered out or not

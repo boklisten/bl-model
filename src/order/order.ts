@@ -11,4 +11,5 @@ export class Order extends BlDocument {
 	placed?: boolean; // the order is placed in store, only true if order, payments and delivery have met the criteria
 	payments?: string[]; // ids of the payments this order has
 	delivery?: string; // the id of the delivery object this order has
+	handoutByDelivery?: boolean // if set this order is a "handout by delivery" order aka items sent by mail
 }
