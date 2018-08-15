@@ -21,5 +21,8 @@ export class BranchPaymentInfo {
 	buyout: {
 		percentage: number //the percentage of the item.price it costs for the customer to buyout a item
 	};
+	sell?: { // information about when customer sells items to branch
+		percentage: number // the percentage of the full price the branch buys the item in for
+	};
 	acceptedMethods: PaymentMethod[]
 }
