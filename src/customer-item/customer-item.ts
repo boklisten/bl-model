@@ -39,4 +39,17 @@ export class CustomerItem extends BlDocument {
 		periodType: Period, //what type of period this extend is
 		time: Date // time this extend was made
 	}[];
+	customerInfo?: {
+		name: string,
+		phone: string,
+		address: string,
+		postCode: string,
+		postCity: string,
+		dob: Date,
+		guardian?: {
+			name: string,
+			phone: string,
+			email: string
+		}
+	}
 }
