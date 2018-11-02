@@ -8,6 +8,7 @@ export {BranchItem} from './branch-item/branch-item';
 export {Comment} from './comment/comment';
 export {CustomerItem} from './customer-item/customer-item';
 export {Item} from './item/item';
+export {Message} from './message/message';
 export {OpeningHour} from './opening-hour/opening-hour';
 export {Order} from './order/order';
 export {OrderItem} from './order/order-item/order-item';

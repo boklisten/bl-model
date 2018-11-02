@@ -3,3 +3,5 @@
 /dist
 .compile
 /node_modules
+*.swp
+Session.vim
