@@ -16,6 +16,7 @@ export {UserPermission} from './permission/user-permission';
 export {AccessToken} from './token/access-token';
 export {RefreshToken} from './token/refresh-token';
 export {UserDetail} from './user/user-detail/user-detail';
+export {TextBlock} from './text-block/text-block';
 
 
 export {Payment} from './payment/payment';
