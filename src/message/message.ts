@@ -3,6 +3,7 @@ import { BlDocument } from '../bl-document/bl-document';
 import { MessageType } from './message-type/message-type';
 import { MessageMethod } from './message-method/message-method';
 import { MessageReminderInfo } from './message-info/message-reminder-info';
+import { TextBlock } from '../text-block/text-block';
 
 /*
  * A message is something that is sent to a customer
@@ -19,9 +20,9 @@ export class Message extends BlDocument {
   // if employee should be known to customer, set it here
   employeeId?: string;
   // info based on the specific message type
-  info: MessageReminderInfo;
-  // the message, it is actually optional as some MessageTypes has default text
-  message?: string;
+  info?: MessageReminderInfo;
+  // the actual message is separated into text blocks, this makes it very flexible
+  textBlocks?: TextBlock[]
 }
 
 
