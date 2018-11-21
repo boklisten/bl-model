@@ -7,5 +7,5 @@ export type OrderItemExtendInfo = {
 	to: Date;
 	numberOfPeriods: 1;
 	periodType: Period;
-	customerItem: string; // the id of the customer item
+	customerItem: string | CustomerItem; // the id of the customer item
 }

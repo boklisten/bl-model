@@ -1,5 +1,9 @@
 import {BlDocument} from "../bl-document/bl-document";
 import {Period} from "../period/period";
+import { UserDetail } from "../user/user-detail/user-detail";
+import { SharedItem } from "../shared-item/shared-item";
+import { Order } from "../order/order";
+import { Item } from "../item/item";
 
 
 /**
@@ -8,9 +12,9 @@ import {Period} from "../period/period";
  * it can either be handed out by a Branch or another Customer.
  */
 export class CustomerItem extends BlDocument {
-	item: string; // what item is this customerItem for
-	customer: string; // the id of the customer
-	sharedItem?: string; // can point to a shared item, if so the item has a unique id and can be traced
+	item: string | Item; // what item is this customerItem for
+  customer: string | UserDetail; // the id/or the customer
+	sharedItem?: string | SharedItem; // can point to a shared item, if so the item has a unique id and can be traced
 	deadline: Date; //the deadline to return this item
 	status?: "rent" | "cancel" | "buy"; // status of the customerItem
 	handout: boolean; // if this customerItem is handed out to customer or not
@@ -31,7 +35,7 @@ export class CustomerItem extends BlDocument {
 	buyoutInfo?: {
 		order: string
 	};
-	orders?: string[]; // what orders are this customerItem a part of, must be at least one, the order placement
+	orders?: string[] | Order[]; // what orders are this customerItem a part of, must be at least one, the order placement
 	totalAmount?: number;
 	periodExtends?: {
 		from: Date, // the old deadline

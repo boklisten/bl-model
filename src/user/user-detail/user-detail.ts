@@ -1,6 +1,9 @@
 
 
 import {BlDocument} from "../../bl-document/bl-document";
+import { Branch } from "../../branch/branch";
+import { Order } from "../../order/order";
+import { CustomerItem } from "../../customer-item/customer-item";
 
 export class UserDetail extends BlDocument {
 	name: string;
@@ -11,7 +14,7 @@ export class UserDetail extends BlDocument {
 	postCity: string;
 	country: string;
 	dob: Date;
-	branch: string;
+	branch: string | Branch;
 	emailConfirmed?: boolean;
 	guardian?: {
 		name: string;
@@ -20,6 +23,6 @@ export class UserDetail extends BlDocument {
 		phone: string;
 		confirmed?: boolean;
 	};
-	orders?: string[];
-	customerItems?: string[];
+	orders?: string[] | Order[];
+	customerItems?: string[] | CustomerItem[];
 }
