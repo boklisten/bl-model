@@ -1,4 +1,3 @@
-
 export {BlDocument} from './bl-document/bl-document';
 export {BlError} from './bl-error/bl-error';
 export {BlapiErrorResponse} from './blapi-response/blapi-error-response';
@@ -18,7 +17,6 @@ export {RefreshToken} from './token/refresh-token';
 export {UserDetail} from './user/user-detail/user-detail';
 export {TextBlock} from './text-block/text-block';
 
-
 export {Payment} from './payment/payment';
 export {PaymentMethod} from './payment/payment-method/payment-method';
 export {PaymentInfo} from './payment/payment-info/payment-info';
@@ -26,9 +24,19 @@ export {PaymentInfo} from './payment/payment-info/payment-info';
 export {Delivery} from './delivery/delivery';
 export {DeliveryMethod} from './delivery/delivery-method/delivery-method';
 export {DeliveryInfoBring} from './delivery/delivery-info/delivery-info-bring';
-export {DeliveryInfoBranch} from './delivery/delivery-info/delivery-info-branch';
+export {
+  DeliveryInfoBranch,
+} from './delivery/delivery-info/delivery-info-branch';
 
 export {BlApiError} from './bl-api-error/bl-api-error';
-export {BlApiLoginRequiredError} from './bl-api-error/bl-api-login-required-error';
-export {BlApiPermissionDeniedError} from './bl-api-error/bl-api-permission-denied-error';
+export {
+  BlApiLoginRequiredError,
+} from './bl-api-error/bl-api-login-required-error';
+export {
+  BlApiPermissionDeniedError,
+} from './bl-api-error/bl-api-permission-denied-error';
 export {BlApiNotFoundError} from './bl-api-error/bl-api-not-found-error';
+
+export {
+  SendgridEvent,
+} from './message/message-sendgrid-event/message-sendgrid-event';

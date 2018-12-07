@@ -1,9 +1,9 @@
-
-import { BlDocument } from '../bl-document/bl-document';
-import { MessageType } from './message-type/message-type';
-import { MessageMethod } from './message-method/message-method';
-import { MessageReminderInfo } from './message-info/message-reminder-info';
-import { TextBlock } from '../text-block/text-block';
+import {BlDocument} from '../bl-document/bl-document';
+import {MessageType} from './message-type/message-type';
+import {MessageMethod} from './message-method/message-method';
+import {MessageReminderInfo} from './message-info/message-reminder-info';
+import {TextBlock} from '../text-block/text-block';
+import {SendgridEvent} from './message-sendgrid-event/message-sendgrid-event';
 
 /*
  * A message is something that is sent to a customer
@@ -21,8 +21,8 @@ export class Message extends BlDocument {
   employeeId?: string;
   // info based on the specific message type
   info?: MessageReminderInfo;
+
+  sendgridEvents?: SendgridEvent[]; // events from sendgrid
   // the actual message is separated into text blocks, this makes it very flexible
-  textBlocks?: TextBlock[]
+  textBlocks?: TextBlock[];
 }
-
-
