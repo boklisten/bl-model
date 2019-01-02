@@ -5,6 +5,12 @@ export class BranchPaymentInfo {
 	responsible: boolean; // if set the branch is responsible for payment, not the customer
 	responsibleForDelivery?: boolean; // if set the customer does not need to pay for the delivery
 	payLater?: boolean; // if set the customer can pay the order later at branch
+  partlyPaymentPeriods?: [{
+    type: Period,
+    date: Date,
+    maxNumberOfPeriods: number,
+    percentage: number // item.price * this filed desides the full price for partly payemnt for the given period
+  }];
 	rentPeriods: [{
 		type: Period, // the allowed period
 		date: Date,
@@ -18,7 +24,7 @@ export class BranchPaymentInfo {
 		price: number, // the price of the extend period
 		percentage?: number //if set then use percentage of item
 	}];
-	buyout: {
+  buyout?: { // buyout needs only to be described when rent is possible
 		percentage: number //the percentage of the item.price it costs for the customer to buyout a item
 	};
 	sell?: { // information about when customer sells items to branch
