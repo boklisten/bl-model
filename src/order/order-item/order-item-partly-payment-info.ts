@@ -3,6 +3,6 @@ import { CustomerItem } from "../../customer-item/customer-item";
 
 export type OrderItemPartlyPaymentInfo = {
   deadline: Date; // the deadline for the next partly payment
-  periodType: Period; // what type of period
-  customerItem?: string | CustomerItem; // id of customerItem of the CusotmerItem
+  totalAmount: number; // the total amount this item costs 
+  customerItem?: string | CustomerItem; // id of customerItem of the CusotmerItem if this is from another order
 }
