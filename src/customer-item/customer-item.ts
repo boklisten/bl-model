@@ -18,7 +18,7 @@ export class CustomerItem extends BlDocument {
   type?: CustomerItemType; // type is used to determine how to handle the customerItem
   customer: string | UserDetail; // the id/or the customer
   sharedItem?: string | SharedItem; // can point to a shared item, if so the item has a unique id and can be traced
-  deadline: Date; //the deadline to return this item
+  deadline: Date; //the deadline to return (or buyout if type is "partly-payment") this item
   status?: "rent" | "cancel" | "buy"; // status of the customerItem
 
   handout: boolean; // if this customerItem is handed out to customer or not
@@ -43,9 +43,13 @@ export class CustomerItem extends BlDocument {
   };
 
   orders?: string[] | Order[]; // what orders are this customerItem a part of, must be at least one, the order placement
-
-  payed?: number; // the amount payed for this item (only if type is partly-payment)
+  
+  //--------- When type is "partly-payment"
+  // when the deadline is approaching the customer can buyout the item
+  // the amount to pay on buyout is the amount in "amountLeftToPay" 
+  amountLeftToPay?: number; // the amount left to pay on this customerItem (only if type is partly-payment),
   totalAmount?: number; // the total amount that should be payed (only if type is partly-payent)
+  // ---------
 
   periodExtends?: {
     from: Date, // the old deadline

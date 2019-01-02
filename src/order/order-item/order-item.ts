@@ -11,7 +11,7 @@ export class OrderItem {
   item: string | Item; //id of/or the item
 	title: string; //the title of item
 	amount: number; //the amount to pay
-	unitPrice: number; //item.price * rentRate
+	unitPrice: number; //item.price * rentRate (or item.price * branchItem.partlyPaymentRate if type is "partly-payment")
 	taxRate: number; //item.taxRate
 	taxAmount: number; //amount * taxRate
 	handout?: boolean; // if set, this orderItem is the "handout" of this item
