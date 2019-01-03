@@ -1,4 +1,5 @@
 import {PaymentMethod} from "../payment/payment-method/payment-method";
+
 import {Period} from "../period/period";
 
 export class BranchPaymentInfo {
@@ -8,8 +9,8 @@ export class BranchPaymentInfo {
   partlyPaymentPeriods?: [{
     type: Period,
     date: Date,
-    maxNumberOfPeriods: number,
-    percentage: number // item.price * this filed desides the full price for partly payemnt for the given period
+    percentageBuyout: number, // item.price * this desides what the customer must pay on buyout
+    percentageUpFront: number // item.price * this desides what the customer needs to pay upfront 
   }];
 	rentPeriods: [{
 		type: Period, // the allowed period
