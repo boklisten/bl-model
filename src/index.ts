@@ -20,6 +20,7 @@ export {TextBlock} from './text-block/text-block';
 export {Payment} from './payment/payment';
 export {PaymentMethod} from './payment/payment-method/payment-method';
 export {PaymentInfo} from './payment/payment-info/payment-info';
+export { Period }  from "./period/period";
 
 export {Delivery} from './delivery/delivery';
 export {DeliveryMethod} from './delivery/delivery-method/delivery-method';
