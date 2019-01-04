@@ -11,6 +11,7 @@ export {Message} from './message/message';
 export {OpeningHour} from './opening-hour/opening-hour';
 export {Order} from './order/order';
 export {OrderItem} from './order/order-item/order-item';
+export { OrderItemType } from "./order/order-item/order-item-type.ts";
 export {UserPermission} from './permission/user-permission';
 export {AccessToken} from './token/access-token';
 export {RefreshToken} from './token/refresh-token';
