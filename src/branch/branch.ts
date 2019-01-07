@@ -30,7 +30,11 @@ export class Branch extends BlDocument {
 	deliveryMethods?: {
 		branch?: boolean,
 		byMail?: boolean
-	};
+  };
+  isBranchItemsLive?: { // this object defines if the branchItems is live or not
+    online: boolean; // if the branchItems is live online
+    atBranch: boolean; // if the branchItems is live at branch (bladmin)
+  }
   branchItems: string[] | BranchItem[]; // ids of/or the branchItems for this branch
 	itemCategories?: [{ // the item categories
 		name: string, // the name of the category
