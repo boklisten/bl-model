@@ -10,7 +10,10 @@ export class BranchPaymentInfo {
     type: Period,
     date: Date,
     percentageBuyout: number, // item.price * this desides what the customer must pay on buyout
-    percentageUpFront: number // item.price * this desides what the customer needs to pay upfront 
+    percentageBuyoutUsed: number, // same as percentageBuyout but for when the item is used
+    percentageUpFront: number // item.price * this desides what the customer needs to pay upfront
+    percentageUpFrontUsed: number // same as percentageUpFront but for when teh item is used
+
   }];
 	rentPeriods: [{
 		type: Period, // the allowed period
