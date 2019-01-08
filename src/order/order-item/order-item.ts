@@ -9,7 +9,8 @@ import { Order } from "../order";
 export class OrderItem {
 	type: OrderItemType; //the operation on this OrderItem
   item: string | Item; //id of/or the item
-	title: string; //the title of item
+  title: string; //the title of item
+  age?: 'new' | 'used'; // describes if the item is new or used
 	amount: number; //the amount to pay
 	unitPrice: number; //item.price * rentRate (or item.price * branchItem.partlyPaymentRate if type is "partly-payment")
 	taxRate: number; //item.taxRate

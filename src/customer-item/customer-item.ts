@@ -16,6 +16,7 @@ import { CustomerItemType } from "./customer-item-type";
 export class CustomerItem extends BlDocument {
   item: string | Item; // what item is this customerItem for
   type?: CustomerItemType; // type is used to determine how to handle the customerItem
+  age?: 'new' | 'used'; // describes if the item is new or used
   customer: string | UserDetail; // the id/or the customer
   sharedItem?: string | SharedItem; // can point to a shared item, if so the item has a unique id and can be traced
   deadline: Date; //the deadline to return (or buyout if type is "partly-payment") this item
