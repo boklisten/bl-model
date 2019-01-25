@@ -11,17 +11,18 @@ export {Message} from './message/message';
 export {OpeningHour} from './opening-hour/opening-hour';
 export {Order} from './order/order';
 export {OrderItem} from './order/order-item/order-item';
-export { OrderItemType } from "./order/order-item/order-item-type";
+export {OrderItemType} from './order/order-item/order-item-type';
 export {UserPermission} from './permission/user-permission';
 export {AccessToken} from './token/access-token';
 export {RefreshToken} from './token/refresh-token';
 export {UserDetail} from './user/user-detail/user-detail';
 export {TextBlock} from './text-block/text-block';
+export {Invoice} from './invoice/invoice';
 
 export {Payment} from './payment/payment';
 export {PaymentMethod} from './payment/payment-method/payment-method';
 export {PaymentInfo} from './payment/payment-info/payment-info';
-export { Period }  from "./period/period";
+export {Period} from './period/period';
 
 export {Delivery} from './delivery/delivery';
 export {DeliveryMethod} from './delivery/delivery-method/delivery-method';
