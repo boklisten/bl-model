@@ -22,6 +22,7 @@ export class Invoice extends BlDocument {
     name: string;
     email: string;
     phone: string;
+    dob: Date;
     postal: {
       address: string;
       city: string;
