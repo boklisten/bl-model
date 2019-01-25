@@ -4,6 +4,7 @@ import {UserDetail} from '../user/user-detail/user-detail';
 
 export class Invoice extends BlDocument {
   duedate: Date;
+  customerHavePayed: boolean;
   customerItemPayments: {
     customerItem: string | CustomerItem;
     title: string;
