@@ -20,6 +20,7 @@ export class Invoice extends BlDocument {
   customerInfo: {
     userDetail: string | UserDetail;
     name: string;
+    branchName?: string;
     email: string;
     phone: string;
     dob: Date;
@@ -32,7 +33,7 @@ export class Invoice extends BlDocument {
   };
   payment: {
     total: {
-      // amounts are a sum of all items including the fee
+      // amounts are a sum of all items
       gross: number;
       net: number;
       vat: number;
@@ -45,7 +46,8 @@ export class Invoice extends BlDocument {
       vat: number;
       discount: number; // in percentage
     };
+    totalIncludingFee: number; // total.gross + fee.gross
   };
-  invoiceId?: string;
-  reference?: string;
+  invoiceId?: string; // ex. 201810000
+  reference?: string; // ex. 'Not delivered books in time'
 }
