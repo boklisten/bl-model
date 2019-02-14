@@ -4,11 +4,14 @@ import {UserDetail} from '../user/user-detail/user-detail';
 
 export class Invoice extends BlDocument {
   duedate: Date;
-  customerHavePayed: boolean;
+  customerHavePayed?: boolean;
+  toDebtCollection?: boolean;
+  toCreditNote?: boolean;
   customerItemPayments: {
     customerItem: string | CustomerItem;
     title: string;
     numberOfItems: number;
+    cancel?: boolean;
     payment: {
       unit: number; // price per unit without vat
       gross: number;
