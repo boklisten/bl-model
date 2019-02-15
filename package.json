@@ -1,6 +1,6 @@
 {
   "name": "@wizardcoder/bl-model",
-  "version": "0.19.4",
+  "version": "0.19.5",
   "description": "generic classes for use in all boklisten apps",
   "license": "MIT",
   "main": "dist/index.js",
