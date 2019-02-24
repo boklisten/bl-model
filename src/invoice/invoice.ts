@@ -10,6 +10,7 @@ export class Invoice extends BlDocument {
   branch?: string;
   customerItemPayments: {
     customerItem: string | CustomerItem;
+    item: string;
     title: string;
     numberOfItems: number;
     cancel?: boolean;
