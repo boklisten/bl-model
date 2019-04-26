@@ -1,2 +1,1 @@
-export type MessageMethod = "email" | "sms" | "all";
-
+export type MessageMethod = 'email' | 'sms' | 'all';
