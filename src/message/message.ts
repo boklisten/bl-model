@@ -16,6 +16,8 @@ export class Message extends BlDocument {
   messageType: MessageType;
   // what type of subtype, ex: 'partly-payment', 'rent'
   messageSubtype: MessageSubtype;
+  // if there are more than one message of this type and subtype
+  sequenceNumber?: number;
   // what type of method should be used to send message ex: 'email', 'sms'
   messageMethod: MessageMethod;
   // the id of the customer
