@@ -26,8 +26,8 @@ export class Message extends BlDocument {
   employeeId?: string;
   // info based on the specific message type
   info?: MessageReminderInfo;
-
   events?: SendgridEvent[]; // events for this message, can be sendgrid events
+  smsEvents?: any[]; // sms events for this message
   // the message can be supported with text blocks
   textBlocks?: TextBlock[];
 }
