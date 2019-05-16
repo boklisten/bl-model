@@ -1,5 +1,5 @@
-import { Period } from "../../period/period";
-import { CustomerItem } from "../../customer-item/customer-item";
+import {Period} from '../../period/period';
+import {CustomerItem} from '../../customer-item/customer-item';
 
 export type OrderItemPartlyPaymentInfo = {
   from?: Date;
@@ -8,4 +8,4 @@ export type OrderItemPartlyPaymentInfo = {
   numberOfPeriods?: number;
   amountLeftToPay: number; // the amount left to pay on buyout of this item
   customerItem?: string | CustomerItem;
-}
+};
