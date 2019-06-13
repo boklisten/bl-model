@@ -1,1 +1,6 @@
-export type MessageSubtype = 'partly-payment' | 'rent' | 'loan' | 'none';
+export type MessageSubtype =
+  | 'partly-payment'
+  | 'rent'
+  | 'loan'
+  | 'none'
+  | 'all';

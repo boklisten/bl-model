@@ -1,1 +1,1 @@
-export type MessageType = 'reminder' | 'regular';
+export type MessageType = 'reminder' | 'regular' | 'generic';
