@@ -1,11 +1,11 @@
 import {BlDocument} from '../bl-document/bl-document';
 import {CustomerItem} from '../customer-item/customer-item';
 import {UserDetail} from '../user/user-detail/user-detail';
-import { CustomerItemType } from '../customer-item/customer-item-type';
+import {CustomerItemType} from '../customer-item/customer-item-type';
 
 export class Invoice extends BlDocument {
   duedate: Date;
-  type: CustomerItemType,
+  type: CustomerItemType;
   customerHavePayed?: boolean;
   toDebtCollection?: boolean;
   toCreditNote?: boolean;
@@ -15,7 +15,7 @@ export class Invoice extends BlDocument {
     item: string;
     title: string;
     numberOfItems: number;
-    type: CustomerItemType,
+    type: CustomerItemType;
     cancel?: boolean;
     payment: {
       unit: number; // price per unit without vat
