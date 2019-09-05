@@ -11,7 +11,7 @@ export class Invoice extends BlDocument {
   toCreditNote?: boolean;
   branch?: string;
   customerItemPayments: {
-    customerItem: string | CustomerItem;
+    customerItem?: string | CustomerItem;
     item: string;
     title: string;
     numberOfItems: number;
@@ -26,12 +26,13 @@ export class Invoice extends BlDocument {
     };
   }[];
   customerInfo: {
-    userDetail: string | UserDetail;
+    userDetail?: string | UserDetail;
+    companyDetail?: string;
     name: string;
     branchName?: string;
     email: string;
     phone: string;
-    dob: Date;
+    dob?: Date;
     postal: {
       address: string;
       city: string;

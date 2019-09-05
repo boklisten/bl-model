@@ -6,7 +6,7 @@ export {Branch} from './branch/branch';
 export {BranchItem} from './branch-item/branch-item';
 export {Comment} from './comment/comment';
 export {CustomerItem} from './customer-item/customer-item';
-export {CustomerItemType } from './customer-item/customer-item-type';
+export {CustomerItemType} from './customer-item/customer-item-type';
 export {Item} from './item/item';
 export {Message} from './message/message';
 export {OpeningHour} from './opening-hour/opening-hour';
@@ -44,3 +44,5 @@ export {BlApiNotFoundError} from './bl-api-error/bl-api-not-found-error';
 export {
   SendgridEvent,
 } from './message/message-sendgrid-event/message-sendgrid-event';
+
+export {Company} from './company/company';
