@@ -5,7 +5,7 @@ import {CustomerItemType} from '../customer-item/customer-item-type';
 
 export class Invoice extends BlDocument {
   duedate: Date;
-  type: CustomerItemType;
+  type?: CustomerItemType;
   customerHavePayed?: boolean;
   toDebtCollection?: boolean;
   toCreditNote?: boolean;
@@ -30,6 +30,7 @@ export class Invoice extends BlDocument {
     companyDetail?: string;
     name: string;
     branchName?: string;
+    organizationNumber?: string;
     email: string;
     phone: string;
     dob?: Date;
@@ -48,7 +49,7 @@ export class Invoice extends BlDocument {
       vat: number;
       discount: number; // in percentage
     };
-    fee: {
+    fee?: {
       unit: number; // fee per unit without vat
       gross: number;
       net: number;
@@ -57,6 +58,7 @@ export class Invoice extends BlDocument {
     };
     totalIncludingFee: number; // total.gross + fee.gross
   };
+  ourReference?: string;
   invoiceId?: string; // ex. 201810000
   reference?: string; // ex. 'Not delivered books in time'
 }
