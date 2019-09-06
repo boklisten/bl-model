@@ -28,6 +28,7 @@ export class Invoice extends BlDocument {
   customerInfo: {
     userDetail?: string | UserDetail;
     companyDetail?: string;
+    customerNumber?: string;
     name: string;
     branchName?: string;
     organizationNumber?: string;
