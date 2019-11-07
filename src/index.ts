@@ -20,6 +20,11 @@ export {UserDetail} from './user/user-detail/user-detail';
 export {TextBlock} from './text-block/text-block';
 export {Invoice} from './invoice/invoice';
 
+export {Match} from './match/match';
+export {MatchUser} from './match/match-user';
+
+export {Location} from './location/location';
+
 export {Payment} from './payment/payment';
 export {PaymentMethod} from './payment/payment-method/payment-method';
 export {PaymentInfo} from './payment/payment-info/payment-info';
