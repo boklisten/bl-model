@@ -1,12 +1,26 @@
 import {BlDocument} from '../bl-document/bl-document';
 import {Location} from '../location/location';
-import {MatchUser} from './match-user';
+import {MatchProfile} from './match-profile';
+import {MatchState} from './match-state';
 
 export class Match extends BlDocument {
-  sender: MatchUser;
-  reciever: MatchUser;
+  sender: MatchProfile;
+  recievers: MatchProfile[];
+  items: {
+    id: string; // id of the item in DB
+    title: string; // title of the item
+    reciever: string; // userId of the reciever
+    rating?: {
+      sender?: number; // a number between 0-5
+      reciever?: number; // a number between 0-5
+    };
+    sent?: {time: Date};
+    recieved?: {time: Date};
+  }[];
+  state: MatchState;
+  events: {type: MatchState; time: Date}[];
+  branch: string; // The branch of where the match should be made at
   meetingPoint: {location: Location; time: Date}[];
-  matched?: {
-    time: Date;
-  };
 }
+
+// You can only have ONE sender per Match, but several recievers
