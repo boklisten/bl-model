@@ -21,7 +21,8 @@ export {TextBlock} from './text-block/text-block';
 export {Invoice} from './invoice/invoice';
 
 export {Match} from './match/match';
-export {MatchUser} from './match/match-user';
+export {MatchState} from './match/match-state';
+export {MatchProfile} from './match/match-profile';
 
 export {Location} from './location/location';
 
