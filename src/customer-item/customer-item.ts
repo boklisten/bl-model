@@ -20,7 +20,11 @@ export class CustomerItem extends BlDocument {
   sharedItem?: string | SharedItem; // can point to a shared item, if so the item has a unique id and can be traced
   deadline: Date; //the deadline to return (or buyout if type is "partly-payment") this item
   status?: 'rent' | 'cancel' | 'buy'; // status of the customerItem
-
+  match?: boolean;
+  matchInfo?: {
+    id?: string;
+    time?: Date;
+  };
   handout: boolean; // if this customerItem is handed out to customer or not
   handoutInfo?: {
     handoutBy: 'branch' | 'customer'; // if this was handed out by another customer or a branch
@@ -39,7 +43,8 @@ export class CustomerItem extends BlDocument {
 
   buyout?: boolean; // if customerItem was bought out this is set to true
   buyoutInfo?: {
-    order: string; // the id of the order made when buyout
+    order?: string; // the id of the order made when buyout
+    time?: Date;
   };
 
   buyback?: boolean;
