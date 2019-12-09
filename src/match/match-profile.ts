@@ -5,7 +5,7 @@ export type MatchProfile = {
   name: string; // name of the user
   email: string; // email of the user
   phone: string; // phonw nyumber for the user
-  meetingOptions: {
+  meetingOptions?: {
     location: Location;
     time: Date;
   }[];
