@@ -23,6 +23,7 @@ export {Invoice} from './invoice/invoice';
 export {Match} from './match/match';
 export {MatchState} from './match/match-state';
 export {MatchProfile} from './match/match-profile';
+export {MatchItem} from './match/match-item';
 
 export {Location} from './location/location';
 
