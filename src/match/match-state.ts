@@ -2,5 +2,7 @@ export type MatchState =
   | 'created'
   | 'partly-matched'
   | 'fully-matched'
-  | 'done'
-  | 'cancled';
+  | 'meeting-point-accepted'
+  | 'meeting-point-declined'
+  | 'canceled'
+  | 'done';
