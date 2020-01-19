@@ -4,5 +4,7 @@ export type MatchState =
   | 'fully-matched'
   | 'meeting-point-accepted'
   | 'meeting-point-declined'
+  | 'items-sent'
+  | 'items-recieved'
   | 'canceled'
   | 'done';
