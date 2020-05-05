@@ -5,4 +5,5 @@ export class Booking extends BlDocument {
   to: Date;
   customer: string;
   branch: string;
+  booked?: boolean;
 }
