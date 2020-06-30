@@ -56,3 +56,5 @@ export {
 } from "./message/message-sendgrid-event/message-sendgrid-event";
 
 export { Company } from "./company/company";
+
+export { UniqueItem } from "./unique-item/unique-item";

@@ -1,15 +1,16 @@
-import {OrderItemInfo} from './order-item-info';
-import {OrderItemType} from './order-item-type';
-import {PaymentDiscount} from '../../payment/payment-discount/payment-discount';
-import {Item} from '../../item/item';
-import {CustomerItem} from '../../customer-item/customer-item';
-import {Order} from '../order';
+import { OrderItemInfo } from "./order-item-info";
+import { OrderItemType } from "./order-item-type";
+import { PaymentDiscount } from "../../payment/payment-discount/payment-discount";
+import { Item } from "../../item/item";
+import { CustomerItem } from "../../customer-item/customer-item";
+import { Order } from "../order";
 
 export class OrderItem {
   type: OrderItemType; //the operation on this OrderItem
   item: string | Item; //id of/or the item
+  blid?: string; // BLID of item
   title: string; //the title of item
-  age?: 'new' | 'used'; // describes if the item is new or used
+  age?: "new" | "used"; // describes if the item is new or used
   amount: number; //the amount to pay
   unitPrice: number; //item.price * rentRate (or item.price * branchItem.partlyPaymentRate if type is "partly-payment")
   taxRate: number; //item.taxRate
