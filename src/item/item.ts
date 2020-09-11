@@ -6,6 +6,7 @@ export class Item extends BlDocument {
   type: ItemType;
   price: number;
   taxRate: number;
+  digital?: boolean;
   info?: any;
   desc?: string;
   buyback?: boolean;
