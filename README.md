@@ -11,7 +11,7 @@ Read more about [typescript](www.typescriptlang.com)
 This module can easily be installed by running `npm install` (or the shorthand `npm i`)
 
 ```bash
-npm i @wizardcoder/bl-model
+npm i @boklisten/bl-model
 ```
 ## Usage
 
@@ -20,7 +20,7 @@ Every class can now be used by importing it into your project and classes.
 Example usage:
 
 ```typescript
-import { Branch, CustomerItem } from "@wizardcoder/bl-model";
+import { Branch, CustomerItem } from "@boklisten/bl-model";
 
 class SampleClass {
 
