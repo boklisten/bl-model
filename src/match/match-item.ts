@@ -7,6 +7,6 @@ export class MatchItem {
     sender?: number; // a number between 0-5
     reciever?: number; // a number between 0-5
   };
-  sent?: {time: Date; user: string};
-  recieved?: {time: Date; user: string};
+  sent?: { time: Date; user: string };
+  recieved?: { time: Date; user: string };
 }

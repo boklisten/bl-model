@@ -1,5 +1,1 @@
-
-
-export class PaymentInfoVipps {
-
-}
+export class PaymentInfoVipps {}

@@ -35,25 +35,15 @@ export { Period } from "./period/period";
 
 export { Delivery } from "./delivery/delivery";
 export { DeliveryMethod } from "./delivery/delivery-method/delivery-method";
-export {
-  DeliveryInfoBring
-} from "./delivery/delivery-info/delivery-info-bring";
-export {
-  DeliveryInfoBranch
-} from "./delivery/delivery-info/delivery-info-branch";
+export { DeliveryInfoBring } from "./delivery/delivery-info/delivery-info-bring";
+export { DeliveryInfoBranch } from "./delivery/delivery-info/delivery-info-branch";
 
 export { BlApiError } from "./bl-api-error/bl-api-error";
-export {
-  BlApiLoginRequiredError
-} from "./bl-api-error/bl-api-login-required-error";
-export {
-  BlApiPermissionDeniedError
-} from "./bl-api-error/bl-api-permission-denied-error";
+export { BlApiLoginRequiredError } from "./bl-api-error/bl-api-login-required-error";
+export { BlApiPermissionDeniedError } from "./bl-api-error/bl-api-permission-denied-error";
 export { BlApiNotFoundError } from "./bl-api-error/bl-api-not-found-error";
 
-export {
-  SendgridEvent
-} from "./message/message-sendgrid-event/message-sendgrid-event";
+export { SendgridEvent } from "./message/message-sendgrid-event/message-sendgrid-event";
 
 export { Company } from "./company/company";
 

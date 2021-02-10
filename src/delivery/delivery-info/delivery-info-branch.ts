@@ -1,4 +1,3 @@
-
 export class DeliveryInfoBranch {
-	branch: string
+  branch: string;
 }

@@ -1,6 +1,6 @@
-import {PaymentMethod} from '../payment/payment-method/payment-method';
+import { PaymentMethod } from "../payment/payment-method/payment-method";
 
-import {Period} from '../period/period';
+import { Period } from "../period/period";
 
 export class BranchPaymentInfo {
   responsible: boolean; // if set the branch is responsible for payment, not the customer
@@ -21,7 +21,7 @@ export class BranchPaymentInfo {
     periodStart: Date;
     periodEnd: Date;
     percentage: number;
-    buyout: {percentage: number};
+    buyout: { percentage: number };
   }[];
   rentPeriods: [
     {

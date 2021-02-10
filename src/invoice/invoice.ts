@@ -1,7 +1,7 @@
-import {BlDocument} from '../bl-document/bl-document';
-import {CustomerItem} from '../customer-item/customer-item';
-import {UserDetail} from '../user/user-detail/user-detail';
-import {CustomerItemType} from '../customer-item/customer-item-type';
+import { BlDocument } from "../bl-document/bl-document";
+import { CustomerItem } from "../customer-item/customer-item";
+import { UserDetail } from "../user/user-detail/user-detail";
+import { CustomerItemType } from "../customer-item/customer-item-type";
 
 export class Invoice extends BlDocument {
   duedate: Date;

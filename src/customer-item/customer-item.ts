@@ -1,10 +1,10 @@
-import {BlDocument} from '../bl-document/bl-document';
-import {Period} from '../period/period';
-import {UserDetail} from '../user/user-detail/user-detail';
-import {SharedItem} from '../shared-item/shared-item';
-import {Order} from '../order/order';
-import {Item} from '../item/item';
-import {CustomerItemType} from './customer-item-type';
+import { BlDocument } from "../bl-document/bl-document";
+import { Period } from "../period/period";
+import { UserDetail } from "../user/user-detail/user-detail";
+import { SharedItem } from "../shared-item/shared-item";
+import { Order } from "../order/order";
+import { Item } from "../item/item";
+import { CustomerItemType } from "./customer-item-type";
 
 /**
  * A CustomerItem is a item that the customer is holding, either by renting
@@ -16,11 +16,11 @@ export class CustomerItem extends BlDocument {
   item: string | Item; // what item is this customerItem for
   blid?: string; // the unique id for this customer item
   type?: CustomerItemType; // type is used to determine how to handle the customerItem
-  age?: 'new' | 'used'; // describes if the item is new or used
+  age?: "new" | "used"; // describes if the item is new or used
   customer: string | UserDetail; // the id/or the customer
   sharedItem?: string | SharedItem; // can point to a shared item, if so the item has a unique id and can be traced
   deadline: Date; //the deadline to return (or buyout if type is "partly-payment") this item
-  status?: 'rent' | 'cancel' | 'buy'; // status of the customerItem
+  status?: "rent" | "cancel" | "buy"; // status of the customerItem
   digital?: boolean; // if the customerItem is digital
   digitalInfo?: {
     id?: string;
@@ -32,7 +32,7 @@ export class CustomerItem extends BlDocument {
   };
   handout: boolean; // if this customerItem is handed out to customer or not
   handoutInfo?: {
-    handoutBy: 'branch' | 'customer'; // if this was handed out by another customer or a branch
+    handoutBy: "branch" | "customer"; // if this was handed out by another customer or a branch
     handoutById: string; // the id of the branch or customer that handed out the item
     handoutEmployee?: string; // if at branch, this is the id of the employee that handed out the item
     time: Date; // the time this item was handed out
@@ -40,7 +40,7 @@ export class CustomerItem extends BlDocument {
 
   returned: boolean; // if this item is returned or not
   returnInfo?: {
-    returnedTo: 'branch' | 'customer'; //if the item was returned to a branch or a customer
+    returnedTo: "branch" | "customer"; //if the item was returned to a branch or a customer
     returnedToId: string; // if returnedTo a branch, this is the id of a branch, otherwise a customer
     returnEmployee?: string; // if it was returned to a branch, this is the id of the employee
     time: Date; //the time of return

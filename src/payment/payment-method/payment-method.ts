@@ -1,6 +1,11 @@
-
-export type PaymentMethod = "dibs" | "cash" | "card" | "vipps" | "branch" | "later" | "cashout";
-
+export type PaymentMethod =
+  | "dibs"
+  | "cash"
+  | "card"
+  | "vipps"
+  | "branch"
+  | "later"
+  | "cashout";
 
 //dibs is a online payment method, used in bl-web, if dibs is used, no other method can be used
 
@@ -22,6 +27,3 @@ export type PaymentMethod = "dibs" | "cash" | "card" | "vipps" | "branch" | "lat
 //cash out means when the branch pays the customer for a item
 // for example, if a customer whants to sell inn a car for 100kr to a branch
 // that branch needs to pay the customer 100kr
-
-
-

@@ -1,4 +1,1 @@
-
-export class PaymentInfoCard {
-
-}
+export class PaymentInfoCard {}

@@ -1,11 +1,11 @@
-import {BlDocument} from '../bl-document/bl-document';
-import {MessageType} from './message-type/message-type';
-import {MessageSubtype} from './message-subtype/message-subtype';
-import {MessageMethod} from './message-method/message-method';
-import {MessageReminderInfo} from './message-info/message-reminder-info';
-import {MessageReceiptInfo} from './message-info/message-receipt-info';
-import {TextBlock} from '../text-block/text-block';
-import {SendgridEvent} from './message-sendgrid-event/message-sendgrid-event';
+import { BlDocument } from "../bl-document/bl-document";
+import { MessageType } from "./message-type/message-type";
+import { MessageSubtype } from "./message-subtype/message-subtype";
+import { MessageMethod } from "./message-method/message-method";
+import { MessageReminderInfo } from "./message-info/message-reminder-info";
+import { MessageReceiptInfo } from "./message-info/message-receipt-info";
+import { TextBlock } from "../text-block/text-block";
+import { SendgridEvent } from "./message-sendgrid-event/message-sendgrid-event";
 
 /*
  * A message is something that is sent to a customer

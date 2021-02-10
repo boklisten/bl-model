@@ -2,19 +2,19 @@ export type SendgridEvent = {
   email: string; // email of the recipient
   timestamp: number; // unix timestamp when message was sent
   event:
-    | 'processed'
-    | 'dropped'
-    | 'delivered'
-    | 'deferred'
-    | 'bounce'
-    | 'open'
-    | 'click'
-    | 'spam'
-    | 'report'
-    | 'unsubscribe'
-    | 'group unsubscribe'
-    | 'group resubscribe';
-  'smtp-id': string; // unique id attached to the message by the originating system
+    | "processed"
+    | "dropped"
+    | "delivered"
+    | "deferred"
+    | "bounce"
+    | "open"
+    | "click"
+    | "spam"
+    | "report"
+    | "unsubscribe"
+    | "group unsubscribe"
+    | "group resubscribe";
+  "smtp-id": string; // unique id attached to the message by the originating system
   useragent: string; // useragent responsible for the event
   sg_event_id: string; // unique id for event
   sg_message_id: string; // unique internal sendgrid id

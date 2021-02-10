@@ -1,4 +1,1 @@
-
-export type PaymentInfoBranch = {
-
-}
+export type PaymentInfoBranch = {};

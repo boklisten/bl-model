@@ -1,1 +1,1 @@
-export type ItemType = 'book';
+export type ItemType = "book";

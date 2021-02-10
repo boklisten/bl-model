@@ -1,11 +1,11 @@
-import {BlDocument} from "..";
+import { BlDocument } from "..";
 import { Item } from "../item/item";
 import { SharedItem } from "../shared-item/shared-item";
 import { Branch } from "../branch/branch";
 
 export class BranchItem extends BlDocument {
-	branch: string | Branch;
-	item: string | Item;
+  branch: string | Branch;
+  item: string | Item;
 
   rent?: boolean; // possible to rent this item in webstore
   sell?: boolean; // possible to sell this item in webstore
@@ -18,8 +18,8 @@ export class BranchItem extends BlDocument {
   buyAtBranch?: boolean; // is it possible to buy item in bladmin
   partlyPaymentAtBranch?: boolean; // is it possible to partly pay item in bladmin
   liveAtBranch?: boolean; // is this item live at branch
-  
-	active?: boolean;
-	sharedItems?: string[] | SharedItem[];
-	categories?: string[];
+
+  active?: boolean;
+  sharedItems?: string[] | SharedItem[];
+  categories?: string[];
 }

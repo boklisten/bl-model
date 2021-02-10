@@ -1,4 +1,1 @@
-
-export type PaymentInfoCashout = {
-
-}
+export type PaymentInfoCashout = {};

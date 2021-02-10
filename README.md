@@ -1,9 +1,11 @@
 # Bl-model
+
 A library containing the classes needed for the boklisten ecosystem.
 
 ## Requires
-  Typescript 2+ 
-    
+
+Typescript 2+
+
 Read more about [typescript](www.typescriptlang.com)
 
 ## Installation
@@ -13,6 +15,7 @@ This module can easily be installed by running `npm install` (or the shorthand `
 ```bash
 npm i @boklisten/bl-model
 ```
+
 ## Usage
 
 Every class can now be used by importing it into your project and classes.
@@ -23,7 +26,6 @@ Example usage:
 import { Branch, CustomerItem } from "@boklisten/bl-model";
 
 class SampleClass {
-
   branch: Branch;
   customerItem: CustomerItem;
 
@@ -32,4 +34,3 @@ class SampleClass {
   }
 }
 ```
-

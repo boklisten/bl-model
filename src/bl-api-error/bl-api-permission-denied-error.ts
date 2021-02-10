@@ -1,24 +1,27 @@
-
-
-import {BlApiError} from "./bl-api-error";
-import {UserPermission} from "../permission/user-permission";
+import { BlApiError } from "./bl-api-error";
+import { UserPermission } from "../permission/user-permission";
 
 export class BlApiPermissionDeniedError extends BlApiError {
-	permission?: UserPermission;
-	permissionRequired?: UserPermission;
-	name?: string;
-	
-	constructor(msg?: string, code?: number, permission?: UserPermission, permissionRequired?: UserPermission) {
-		super(msg, code);
-		
-		this.name = 'BlApiPermissionDeniedError';
-		
-		if (permission) {
-			this.permission = permission;
-		}
-		
-		if (permissionRequired) {
-			this.permissionRequired = permissionRequired;
-		}
-	}
+  permission?: UserPermission;
+  permissionRequired?: UserPermission;
+  name?: string;
+
+  constructor(
+    msg?: string,
+    code?: number,
+    permission?: UserPermission,
+    permissionRequired?: UserPermission
+  ) {
+    super(msg, code);
+
+    this.name = "BlApiPermissionDeniedError";
+
+    if (permission) {
+      this.permission = permission;
+    }
+
+    if (permissionRequired) {
+      this.permissionRequired = permissionRequired;
+    }
+  }
 }

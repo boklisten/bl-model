@@ -1,4 +1,4 @@
-import {Location} from '../location/location';
+import { Location } from "../location/location";
 
 export type MatchProfile = {
   userId: string; // id of the UserDetail

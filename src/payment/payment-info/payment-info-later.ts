@@ -1,5 +1,1 @@
-
-
-export type PaymentInfoLater = {
-
-}
+export type PaymentInfoLater = {};
