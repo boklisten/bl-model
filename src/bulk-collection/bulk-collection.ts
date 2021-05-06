@@ -1,5 +1,4 @@
 export type ScannedBook = {
-  isbn: string;
   blid: string;
   title: string;
   customerName: string;
