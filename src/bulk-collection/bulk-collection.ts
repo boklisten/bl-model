@@ -7,4 +7,5 @@ export type ScannedBook = {
   id: string;
   customerId: string;
   collectedAt?: string;
+  orderId?: string;
 };
