@@ -4,16 +4,15 @@ A library containing the classes needed for the boklisten ecosystem.
 
 ## Requires
 
-Typescript 2+
+Typescript 4+
 
 Read more about [typescript](www.typescriptlang.com)
 
 ## Installation
 
-This module can easily be installed by running `npm install` (or the shorthand `npm i`)
-
-```bash
-npm i @boklisten/bl-model
+This module can easily be installed by running `yarn install`
+`bash
+yarn install @boklisten/bl-model
 ```
 
 ## Usage

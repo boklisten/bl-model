@@ -6,17 +6,17 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "prepare": "npm run build",
+    "prepare": "yarn build",
     "build": "tsc",
-    "blink": "npm run build && cp ./package.json ./dist/ && npm link ./dist",
+    "blink": "yarn build && cp ./package.json ./dist/ && yarn link ./dist",
     "prettier": "prettier --write . --ignore-path .gitignore"
   },
   "dependencies": {
-    "typescript": "^4.1.4"
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
-    "eslint": "^7.19.0",
-    "prettier": "^2.2.1"
+    "eslint": "^7.26.0",
+    "prettier": "^2.3.0"
   },
   "repository": {
     "type": "git",
