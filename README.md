@@ -13,7 +13,8 @@ Read more about [typescript](www.typescriptlang.com)
 This module can easily be installed by running `yarn install`
 `bash
 yarn install @boklisten/bl-model
-```
+
+````
 
 ## Usage
 
@@ -32,4 +33,4 @@ class SampleClass {
     console.log(this.branch.name);
   }
 }
-```
+````

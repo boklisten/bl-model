@@ -5,7 +5,7 @@ export type ScannedBook = {
   deadline: string;
   item: string;
   id: string;
-  type?: string,
+  type?: string;
   customerId: string;
   collectedAt?: string;
   orderId?: string;
