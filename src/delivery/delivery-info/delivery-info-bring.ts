@@ -17,4 +17,5 @@ export class DeliveryInfoBring {
   to?: string;
   from?: string;
   bringId?: string;
+  product?: string;
 }
