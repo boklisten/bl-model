@@ -18,4 +18,5 @@ export type OrderItemType =
   | "cancel"
   | "partly-payment"
   | "loan"
-  | "buyback";
+  | "buyback"
+  | "invoice-paid";
