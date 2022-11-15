@@ -9,6 +9,7 @@ export class Invoice extends BlDocument {
   customerHavePayed?: boolean;
   toDebtCollection?: boolean;
   toCreditNote?: boolean;
+  toLossNote?: boolean;
   branch?: string;
   customerItemPayments: {
     customerItem?: string | CustomerItem;
