@@ -6,17 +6,16 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "prepare": "yarn build",
     "build": "tsc",
-    "blink": "yarn build && cp ./package.json ./dist/ && yarn link ./dist",
-    "lint:prettier": "prettier --check '**/*.{ts,md}' --ignore-path .gitignore",
-    "prettier": "prettier --write '**/*.{ts,md}' --ignore-path .gitignore"
+    "prettier": "prettier --write '**/*.{ts,md}' --ignore-path=.gitignore",
+    "prettier:check": "prettier --check '**/*.{ts,md}' --ignore-path=.gitignore",
+    "blink": "yarn build && cp ./package.json ./dist/ && yarn link ./dist"
   },
   "dependencies": {
     "typescript": "^4.5.2"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.8.4"
   },
   "repository": {
     "type": "git",
