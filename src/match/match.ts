@@ -1,17 +1,45 @@
 import { BlDocument } from "../bl-document/bl-document";
-import { Location } from "../location/location";
-import { MatchProfile } from "./match-profile";
-import { MatchState } from "./match-state";
-import { MatchItem } from "./match-item";
 
-export class Match extends BlDocument {
-  sender: MatchProfile;
-  recievers: MatchProfile[];
-  items: MatchItem[];
-  state: MatchState;
-  events: { type: MatchState; time: Date; userId?: string }[];
-  branch: string; // The branch of where the match should be made at
-  meetingPoint: { location: Location; reciever: string; time: Date }[];
+export enum MatchVariant {
+  UserMatch = "UserMatch",
+  StandPickupMatch = "StandPickupMatch",
+  StandDeliveryMatch = "StandDeliveryMatch",
 }
 
-// You can only have ONE sender per Match, but several recievers
+export interface UserMatchType {
+  _variant: MatchVariant.UserMatch;
+  sender: string;
+  receiver: string;
+  senderBranch: string;
+  // Can be different from senderBranch for Ullern because they have separate branches for each class
+  receiverBranch: string;
+  // items which have been given from sender to anyone. May differ from receivedCustomerItems
+  // when someone receives a book which technically does not belong to the sender
+  deliveredCustomerItems: string[];
+  // items which have been received by the receiver from anyone
+  receivedCustomerItems: string[];
+}
+
+export interface StandPickupMatchType {
+  _variant: MatchVariant.StandPickupMatch;
+  sender: string;
+  senderBranch: string;
+  deliveredCustomerItems: string[];
+}
+
+export interface StandDeliveryMatchType {
+  _variant: MatchVariant.StandDeliveryMatch;
+  sender: string;
+  senderBranch: string;
+  deliveredCustomerItems: string[];
+}
+
+export type Match = {
+  customerItems: string;
+  active: boolean;
+  handoffInfo: {
+    location: string;
+    date: Date;
+  };
+} & BlDocument &
+  (UserMatchType | StandPickupMatchType | StandDeliveryMatchType);
