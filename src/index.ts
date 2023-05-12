@@ -21,7 +21,14 @@ export { UserDetail } from "./user/user-detail/user-detail";
 export { TextBlock } from "./text-block/text-block";
 export { Invoice } from "./invoice/invoice";
 
-export { Match } from "./match/match";
+export {
+  MatchVariant,
+  MatchBase,
+  UserMatch,
+  StandPickupMatch,
+  StandDeliveryMatch,
+  Match,
+} from "./match/match";
 export { MatchState } from "./match/match-state";
 export { MatchProfile } from "./match/match-profile";
 export { MatchItem } from "./match/match-item";
