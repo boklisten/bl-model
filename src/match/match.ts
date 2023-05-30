@@ -24,9 +24,6 @@ export class UserMatch extends MatchBase {
   _variant: MatchVariant.UserMatch = MatchVariant.UserMatch;
   sender: string;
   receiver: string;
-  senderBranch: string;
-  // can be different from senderBranch for Ullern because they have separate branches for each class
-  receiverBranch: string;
   // items which have been given from sender to anyone. May differ from receivedCustomerItems
   // when someone receives a book which technically does not belong to the sender
   deliveredCustomerItems: string[] = [];
@@ -37,51 +34,41 @@ export class UserMatch extends MatchBase {
     sender: string,
     receiver: string,
     customerItems: string[],
-    senderBranch: string,
-    receiverBranch: string,
     handoffInfo: MatchBase["handoffInfo"]
   ) {
     super(customerItems, handoffInfo);
     this.sender = sender;
     this.receiver = receiver;
-    this.senderBranch = senderBranch;
-    this.receiverBranch = receiverBranch;
   }
 }
 
 export class StandPickupMatch extends MatchBase {
   _variant: MatchVariant.StandPickupMatch = MatchVariant.StandPickupMatch;
   receiver: string;
-  receiverBranch: string;
   receivedCustomerItems: string[] = [];
 
   constructor(
     receiver: string,
     customerItems: string[],
-    receiverBranch: string,
     handoffInfo: MatchBase["handoffInfo"]
   ) {
     super(customerItems, handoffInfo);
     this.receiver = receiver;
-    this.receiverBranch = receiverBranch;
   }
 }
 
 export class StandDeliveryMatch extends MatchBase {
   _variant: MatchVariant.StandDeliveryMatch = MatchVariant.StandDeliveryMatch;
   sender: string;
-  senderBranch: string;
   deliveredCustomerItems: string[] = [];
 
   constructor(
     sender: string,
     customerItems: string[],
-    senderBranch: string,
     handoffInfo: { location: string; date: Date }
   ) {
     super(customerItems, handoffInfo);
     this.sender = sender;
-    this.senderBranch = senderBranch;
   }
 }
 
