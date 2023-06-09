@@ -3,13 +3,15 @@
   "version": "0.25.10",
   "description": "generic classes for use in all boklisten apps",
   "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "index.js",
+  "typings": "index.d.ts",
   "scripts": {
     "build": "tsc",
     "prettier": "prettier --write '**/*.{ts,md}' --ignore-path=.gitignore",
     "prettier:check": "prettier --check '**/*.{ts,md}' --ignore-path=.gitignore",
-    "blink": "yarn build && cp ./package.json ./dist/ && yarn link ./dist"
+    "blink": "yarn build && cp package.json dist && yarn link ./dist",
+    "prepublishOnly": "yarn build && cp package.json dist",
+    "pub": "yarn prepublishOnly && yarn publish dist"
   },
   "dependencies": {
     "typescript": "^4.5.2"
