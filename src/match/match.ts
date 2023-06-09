@@ -2,74 +2,59 @@ import { BlDocument } from "../bl-document/bl-document";
 
 export enum MatchVariant {
   UserMatch = "UserMatch",
-  StandPickupMatch = "StandPickupMatch",
-  StandDeliveryMatch = "StandDeliveryMatch",
+  StandMatch = "StandMatch",
 }
 
 export class MatchBase extends BlDocument {
-  customerItems: string[];
-  handoffInfo: {
+  meetingInfo: {
     location: string;
-    date: Date;
+    date: Date | null;
   };
+  orders: string[];
+  // active until orders have been generated and fulfilled for all expected items
 
-  constructor(customerItems: string[], handoffInfo: MatchBase["handoffInfo"]) {
+  constructor(handoffInfo: MatchBase["meetingInfo"]) {
     super();
-    this.customerItems = customerItems;
-    this.handoffInfo = handoffInfo;
+    this.meetingInfo = handoffInfo;
   }
 }
 
 export class UserMatch extends MatchBase {
   _variant: MatchVariant.UserMatch = MatchVariant.UserMatch;
-  sender: string;
-  receiver: string;
-  // items which have been given from sender to anyone. May differ from receivedCustomerItems
-  // when someone receives a book which technically does not belong to the sender
+  // customerItems owned by sender which have been given to anyone. May differ from receivedCustomerItems
+  // when a book is borrowed and handed over to someone other than the technical owner's match
   deliveredCustomerItems: string[] = [];
-  // items which have been received by the receiver from anyone
+  // customerItems which have been received by the receiver from anyone
   receivedCustomerItems: string[] = [];
 
   constructor(
-    sender: string,
-    receiver: string,
-    customerItems: string[],
-    handoffInfo: MatchBase["handoffInfo"]
+    public sender: string,
+    public receiver: string,
+    // items which are expected to be handed over from sender to receiver
+    public expectedItems: string[],
+    meetingInfo: MatchBase["meetingInfo"]
   ) {
-    super(customerItems, handoffInfo);
-    this.sender = sender;
-    this.receiver = receiver;
+    super(meetingInfo);
   }
 }
 
-export class StandPickupMatch extends MatchBase {
-  _variant: MatchVariant.StandPickupMatch = MatchVariant.StandPickupMatch;
-  receiver: string;
-  receivedCustomerItems: string[] = [];
+export class StandMatch extends MatchBase {
+  _variant: MatchVariant.StandMatch = MatchVariant.StandMatch;
+  // items the customer has received from stand
+  receivedItems: string[] = [];
+  // items the customer has handed off to stand
+  deliveredItems: string[] = [];
 
   constructor(
-    receiver: string,
-    customerItems: string[],
-    handoffInfo: MatchBase["handoffInfo"]
+    public customer: string,
+    // items which are expected to be handed off to stand
+    public expectedHandoffItems: string[],
+    // items which are expected to be picked up from stand
+    public expectedPickupItems: string[],
+    meetingInfo: MatchBase["meetingInfo"]
   ) {
-    super(customerItems, handoffInfo);
-    this.receiver = receiver;
+    super(meetingInfo);
   }
 }
 
-export class StandDeliveryMatch extends MatchBase {
-  _variant: MatchVariant.StandDeliveryMatch = MatchVariant.StandDeliveryMatch;
-  sender: string;
-  deliveredCustomerItems: string[] = [];
-
-  constructor(
-    sender: string,
-    customerItems: string[],
-    handoffInfo: { location: string; date: Date }
-  ) {
-    super(customerItems, handoffInfo);
-    this.sender = sender;
-  }
-}
-
-export type Match = UserMatch | StandPickupMatch | StandDeliveryMatch;
+export type Match = UserMatch | StandMatch;

@@ -25,8 +25,7 @@ export {
   MatchVariant,
   MatchBase,
   UserMatch,
-  StandPickupMatch,
-  StandDeliveryMatch,
+  StandMatch,
   Match,
 } from "./match/match";
 export { MatchState } from "./match/match-state";
