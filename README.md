@@ -16,6 +16,13 @@ yarn install @boklisten/bl-model
 
 ````
 
+## Development
+
+Publish with
+```bash
+npm version patch && yarn pub
+```
+
 ## Usage
 
 Every class can now be used by importing it into your project and classes.
