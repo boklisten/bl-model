@@ -8,6 +8,6 @@ export interface RelevantDetails {
 export type MatchWithDetails =
   | StandMatch
   | (UserMatch & {
-  senderDetails: RelevantDetails;
-  receiverDetails: RelevantDetails;
-});
+      senderDetails: RelevantDetails;
+      receiverDetails: RelevantDetails;
+    });
