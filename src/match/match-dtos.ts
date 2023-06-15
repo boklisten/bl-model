@@ -1,13 +1,22 @@
 import { StandMatch, UserMatch } from "./match";
+import { UserDetail } from "../user/user-detail/user-detail";
+import { Item } from "../item/item";
 
-export interface RelevantDetails {
-  name: string;
-  phone: string;
-}
+export type MatchRelevantUserDetails = Pick<UserDetail, "name" | "phone">;
 
-export type MatchWithDetails =
+export type MatchRelevantItemDetails = Pick<Item, "id" | "title">;
+
+export type MatchWithDetails = (
   | StandMatch
   | (UserMatch & {
-      senderDetails: RelevantDetails;
-      receiverDetails: RelevantDetails;
-    });
+      senderDetails: MatchRelevantUserDetails;
+      receiverDetails: MatchRelevantUserDetails;
+      customerItemToItemMap: {
+        [customerItemId: string]: string;
+      };
+    })
+) & {
+  itemDetails: {
+    [itemId: string]: MatchRelevantItemDetails;
+  };
+};

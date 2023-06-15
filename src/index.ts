@@ -28,7 +28,11 @@ export {
   StandMatch,
   Match,
 } from "./match/match";
-export { MatchWithDetails, RelevantDetails } from "./match/match-dtos";
+export {
+  MatchWithDetails,
+  MatchRelevantUserDetails,
+  MatchRelevantItemDetails,
+} from "./match/match-dtos";
 export { MatchState } from "./match/match-state";
 export { MatchProfile } from "./match/match-profile";
 export { MatchItem } from "./match/match-item";
