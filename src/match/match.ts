@@ -26,6 +26,8 @@ export class UserMatch extends MatchBase {
   deliveredCustomerItems: string[] = [];
   // customerItems which have been received by the receiver from anyone
   receivedCustomerItems: string[] = [];
+  // if true, disallow handing the items out or in at a stand, only allow match exchange
+  itemsLockedToMatch: boolean = true;
 
   constructor(
     public sender: string,
