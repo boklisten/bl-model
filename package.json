@@ -10,8 +10,7 @@
     "prettier": "prettier --write '**/*.{ts,md}' --ignore-path=.gitignore",
     "prettier:check": "prettier --check '**/*.{ts,md}' --ignore-path=.gitignore",
     "blink": "yarn build && cp package.json dist && cd dist && yarn link",
-    "prepublishOnly": "npm run build && cp package.json dist",
-    "pub": "npm version patch && npm run prepublishOnly && cd dist && npm publish --registry https://registry.npmjs.org/"
+    "pub": "npm version patch && npm run build && cp package.json README.md dist && cd dist && npm publish --registry https://registry.npmjs.org/"
   },
   "dependencies": {
     "typescript": "^4.5.2"
