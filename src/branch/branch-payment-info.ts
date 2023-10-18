@@ -14,7 +14,7 @@ export class BranchPaymentInfo {
       percentageBuyoutUsed: number; // same as percentageBuyout but for when the item is used
       percentageUpFront: number; // item.price * this desides what the customer needs to pay upfront
       percentageUpFrontUsed: number; // same as percentageUpFront but for when teh item is used
-    }
+    },
   ];
   loanPeriods?: {
     type: Period;
@@ -29,7 +29,7 @@ export class BranchPaymentInfo {
       date: Date;
       maxNumberOfPeriods: number; // max number of periods of this type one item can be rented
       percentage: number; //the percentage of the item.price the rent price is
-    }
+    },
   ];
   extendPeriods: [
     {
@@ -38,7 +38,7 @@ export class BranchPaymentInfo {
       maxNumberOfPeriods: number; // the max number of periods this item can be extended
       price: number; // the price of the extend period
       percentage?: number; //if set then use percentage of item
-    }
+    },
   ];
   buyout?: {
     // buyout needs only to be described when rent is possible

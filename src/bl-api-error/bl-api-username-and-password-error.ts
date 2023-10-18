@@ -10,7 +10,7 @@ export class BlApiUsernameAndPasswordError extends BlApiError {
     msg?: string,
     code?: number,
     permission?: UserPermission,
-    permissionRequired?: UserPermission
+    permissionRequired?: UserPermission,
   ) {
     super(msg, code);
 
