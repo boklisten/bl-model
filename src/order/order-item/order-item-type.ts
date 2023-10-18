@@ -19,4 +19,6 @@ export type OrderItemType =
   | "partly-payment"
   | "loan"
   | "buyback"
-  | "invoice-paid";
+  | "invoice-paid"
+  | "match-receive"
+  | "match-deliver";
