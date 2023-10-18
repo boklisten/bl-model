@@ -43,7 +43,7 @@ export class Branch extends BlDocument {
       // the item categories
       name: string; // the name of the category
       items: string[]; // the items this category have
-    }
+    },
   ];
   location?: {
     region: string;

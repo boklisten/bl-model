@@ -34,7 +34,7 @@ export class UserMatch extends MatchBase {
     public receiver: string,
     // items which are expected to be handed over from sender to receiver
     public expectedItems: string[],
-    meetingInfo: MatchBase["meetingInfo"]
+    meetingInfo: MatchBase["meetingInfo"],
   ) {
     super(meetingInfo);
   }
@@ -53,7 +53,7 @@ export class StandMatch extends MatchBase {
     public expectedHandoffItems: string[],
     // items which are expected to be picked up from stand
     public expectedPickupItems: string[],
-    meetingInfo: MatchBase["meetingInfo"]
+    meetingInfo: MatchBase["meetingInfo"],
   ) {
     super(meetingInfo);
   }
