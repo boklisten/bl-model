@@ -53,9 +53,15 @@ export { BlApiError } from "./bl-api-error/bl-api-error";
 export { BlApiLoginRequiredError } from "./bl-api-error/bl-api-login-required-error";
 export { BlApiPermissionDeniedError } from "./bl-api-error/bl-api-permission-denied-error";
 export { BlApiNotFoundError } from "./bl-api-error/bl-api-not-found-error";
+export { BlApiUserAlreadyExistsError } from "./bl-api-error/bl-api-user-already-exists-error";
+export { BlApiUsernameAndPasswordError } from "./bl-api-error/bl-api-username-and-password-error";
 
 export { SendgridEvent } from "./message/message-sendgrid-event/message-sendgrid-event";
 
 export { Company } from "./company/company";
 
 export { UniqueItem } from "./unique-item/unique-item";
+
+export { PasswordResetRequest } from "./password-reset/password-reset-request";
+export { PendingPasswordReset } from "./password-reset/pending-password-reset";
+export { PasswordResetConfirmationRequest } from "./password-reset/password-reset-confirmation-request";
