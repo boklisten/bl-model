@@ -1,6 +1,6 @@
 {
   "name": "@boklisten/bl-model",
-  "version": "0.25.22",
+  "version": "0.25.24",
   "description": "generic classes for use in all boklisten apps",
   "license": "MIT",
   "main": "index.js",
