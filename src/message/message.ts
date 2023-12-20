@@ -30,7 +30,7 @@ export class Message extends BlDocument {
   events?: SendgridEvent[]; // events for this message, can be sendgrid events
   smsEvents?: any[]; // sms events for this message
   htmlContent?: string; // html content for generic messages
-  customContent?: string // custom content to use when not using sequence number
+  customContent?: string; // custom content to use when not using sequence number
   subject?: string; // subject for generic html
   // the message can be supported with text blocks
   textBlocks?: TextBlock[];
