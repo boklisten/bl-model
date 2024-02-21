@@ -66,3 +66,5 @@ export { UniqueItem } from "./unique-item/unique-item";
 export { PasswordResetRequest } from "./password-reset/password-reset-request";
 export { PendingPasswordReset } from "./password-reset/pending-password-reset";
 export { PasswordResetConfirmationRequest } from "./password-reset/password-reset-confirmation-request";
+
+export { SerializedSignature } from "./signature/serialized-signature";
