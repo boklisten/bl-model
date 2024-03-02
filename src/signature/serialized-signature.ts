@@ -1,5 +1,10 @@
 import { BlDocument } from "../bl-document/bl-document";
 
-export class SerializedSignature extends BlDocument {
+export class SignatureMetadata extends BlDocument {
+  signingName: string;
+  signedByGuardian: boolean;
+}
+
+export class SerializedSignature extends SignatureMetadata {
   base64EncodedImage: string;
 }
