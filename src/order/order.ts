@@ -19,4 +19,7 @@ export class Order extends BlDocument {
   notification?: {
     email: boolean; // if set to false, email should not be sent
   };
+  // if set to false, the order is pending signature from customer or guardian and should not be
+  //  acted on
+  pendingSignature: boolean;
 }

@@ -23,4 +23,5 @@ export class UserDetail extends BlDocument {
   };
   orders?: string[] | Order[];
   customerItems?: string[] | CustomerItem[];
+  signatures: string[];
 }
