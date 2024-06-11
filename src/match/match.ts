@@ -21,13 +21,16 @@ export class MatchBase extends BlDocument {
 
 export class UserMatch extends MatchBase {
   _variant: MatchVariant.UserMatch = MatchVariant.UserMatch;
-  // customerItems owned by sender which have been given to anyone. May differ from receivedCustomerItems
+  // unique items owned by sender which have been given to anyone. May differ from receivedBlIds
   // when a book is borrowed and handed over to someone other than the technical owner's match
-  deliveredCustomerItems: string[] = [];
-  // customerItems which have been received by the receiver from anyone
-  receivedCustomerItems: string[] = [];
+  deliveredBlIds: string[] = [];
+  // unique items which have been received by the receiver from anyone
+  receivedBlIds: string[] = [];
   // if true, disallow handing the items out or in at a stand, only allow match exchange
   itemsLockedToMatch: boolean = true;
+  // when receiver items have overrides, the generated customer items will
+  // get the deadline specified in the override instead of using the branch period deadline
+  deadlineOverrides: { item: string; deadline: string }[] = [];
 
   constructor(
     public sender: string,
@@ -35,8 +38,10 @@ export class UserMatch extends MatchBase {
     // items which are expected to be handed over from sender to receiver
     public expectedItems: string[],
     meetingInfo: MatchBase["meetingInfo"],
+    deadlineOverrides: { item: string; deadline: string }[],
   ) {
     super(meetingInfo);
+    this.deadlineOverrides = deadlineOverrides;
   }
 }
 

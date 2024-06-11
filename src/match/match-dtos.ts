@@ -11,8 +11,8 @@ export type MatchWithDetails = (
   | (UserMatch & {
       senderDetails: MatchRelevantUserDetails;
       receiverDetails: MatchRelevantUserDetails;
-      customerItemToItemMap: {
-        [customerItemId: string]: string;
+      blIdToItemMap: {
+        [blId: string]: string;
       };
     })
 ) & {
