@@ -30,7 +30,7 @@ export class UserMatch extends MatchBase {
   itemsLockedToMatch: boolean = true;
   // when receiver items have overrides, the generated customer items will
   // get the deadline specified in the override instead of using the branch period deadline
-  deadlineOverrides: { item: string; deadline: string }[] = [];
+  deadlineOverrides: { [item: string]: string };
 
   constructor(
     public sender: string,
@@ -38,7 +38,7 @@ export class UserMatch extends MatchBase {
     // items which are expected to be handed over from sender to receiver
     public expectedItems: string[],
     meetingInfo: MatchBase["meetingInfo"],
-    deadlineOverrides: { item: string; deadline: string }[],
+    deadlineOverrides: { [item: string]: string },
   ) {
     super(meetingInfo);
     this.deadlineOverrides = deadlineOverrides;
