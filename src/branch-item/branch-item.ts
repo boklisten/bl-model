@@ -1,11 +1,8 @@
 import { BlDocument } from "..";
-import { Item } from "../item/item";
-import { SharedItem } from "../shared-item/shared-item";
-import { Branch } from "../branch/branch";
 
 export class BranchItem extends BlDocument {
-  branch: string | Branch;
-  item: string | Item;
+  branch: string;
+  item: string;
 
   rent?: boolean; // possible to rent this item in webstore
   sell?: boolean; // possible to sell this item in webstore
@@ -20,6 +17,6 @@ export class BranchItem extends BlDocument {
   liveAtBranch?: boolean; // is this item live at branch
 
   active?: boolean;
-  sharedItems?: string[] | SharedItem[];
+  sharedItems?: string[];
   categories?: string[];
 }

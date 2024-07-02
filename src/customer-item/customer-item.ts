@@ -13,12 +13,12 @@ import { CustomerItemType } from "./customer-item-type";
  * it can either be handed out by a Branch or another Customer.
  */
 export class CustomerItem extends BlDocument {
-  item: string | Item; // what item is this customerItem for
+  item: string; // what item is this customerItem for
   blid?: string; // the unique id for this customer item
   type?: CustomerItemType; // type is used to determine how to handle the customerItem
   age?: "new" | "used"; // describes if the item is new or used
-  customer: string | UserDetail; // the id/or the customer
-  sharedItem?: string | SharedItem; // can point to a shared item, if so the item has a unique id and can be traced
+  customer: string; // the id/or the customer
+  sharedItem?: string; // can point to a shared item, if so the item has a unique id and can be traced
   deadline: Date; //the deadline to return (or buyout if type is "partly-payment") this item
   status?: "rent" | "cancel" | "buy"; // status of the customerItem
   digital?: boolean; // if the customerItem is digital
@@ -63,7 +63,7 @@ export class CustomerItem extends BlDocument {
     order: string;
   };
 
-  orders?: string[] | Order[]; // what orders are this customerItem a part of, must be at least one, the order placement
+  orders?: string[]; // what orders are this customerItem a part of, must be at least one, the order placement
 
   //--------- When type is "partly-payment"
   // when the deadline is approaching the customer can buyout the item
