@@ -11,3 +11,13 @@ export class SignatureMetadata extends BlDocument {
 export class SerializedSignature extends SignatureMetadata {
   base64EncodedImage: string;
 }
+
+export class SerializedGuardianSignature {
+  customerId: string;
+  base64EncodedImage: string;
+  signingName: string;
+}
+
+export class CheckGuardianSignatureSpec {
+  customerId: string;
+}
