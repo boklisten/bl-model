@@ -21,3 +21,9 @@ export class SerializedGuardianSignature {
 export class CheckGuardianSignatureSpec {
   customerId: string;
 }
+
+export class GuardianSignatureInfo {
+  message?: string;
+  customerName?: string;
+  guardianSignatureRequired: boolean;
+}
