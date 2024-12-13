@@ -13,10 +13,10 @@
     "pub": "npm version patch && npm run build && cp package.json README.md dist && cd dist && npm publish --registry https://registry.npmjs.org/"
   },
   "dependencies": {
-    "typescript": "^5.2.2"
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "prettier": "^3.0.3"
+    "prettier": "^3.4.2"
   },
   "repository": {
     "type": "git",
