@@ -18,6 +18,12 @@ export class SerializedGuardianSignature {
   signingName: string;
 }
 
+export class GuardianSignatureInfo {
+  message?: string;
+  customerName?: string;
+  guardianSignatureRequired: boolean;
+}
+
 export class CheckGuardianSignatureSpec {
   customerId: string;
 }
